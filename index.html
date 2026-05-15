@@ -527,6 +527,122 @@ nav{
 /* Footer refined */
 footer{background:#ede9e2;border-top:1px solid var(--brd)}
 
+/* ── SERVIZI — hover avanzato ── */
+.svc{
+  position:relative;overflow:hidden;cursor:default;
+  -webkit-transition:background .3s,box-shadow .3s,-webkit-transform .25s;
+  transition:background .3s,box-shadow .3s,transform .25s;
+}
+.svc::before{
+  content:'';position:absolute;left:0;top:0;bottom:0;width:3px;
+  background:var(--gold);
+  -webkit-transform:scaleY(0);transform:scaleY(0);
+  -webkit-transform-origin:bottom;transform-origin:bottom;
+  -webkit-transition:-webkit-transform .35s ease;transition:transform .35s ease;
+}
+.svc:hover::before{-webkit-transform:scaleY(1);transform:scaleY(1)}
+.svc:hover{
+  background:#faf8f4;
+  box-shadow:0 6px 28px rgba(0,0,0,.07);
+  -webkit-transform:translateX(5px);transform:translateX(5px);
+}
+.svc:hover h4{color:var(--gold);-webkit-transition:color .3s;transition:color .3s}
+.svc li{-webkit-transition:padding-left .2s,color .2s;transition:padding-left .2s,color .2s}
+.svc:hover li{color:var(--txt);padding-left:.2rem}
+
+/* ── AREA CARDS home — hover gold number ── */
+.ac .ai{-webkit-transition:color .3s,-webkit-transform .3s;transition:color .3s,transform .3s}
+.ac:hover .ai{color:var(--gold2);-webkit-transform:scale(1.1);transform:scale(1.1)}
+
+/* ── TIMELINE items — hover ── */
+.tli{-webkit-transition:background .3s;transition:background .3s;padding:.5rem;border-radius:2px}
+.tli:hover{background:rgba(138,109,27,.04)}
+.tli:hover .tld{border-color:var(--gold);box-shadow:0 0 0 4px rgba(138,109,27,.12)}
+
+/* ── VALORI cards — number hover ── */
+.vc:hover .vl{color:rgba(138,109,27,.3);-webkit-transition:color .4s;transition:color .4s}
+
+/* ── TEAM CARD CLICCABILE (bio) ── */
+.tmc-bio{cursor:pointer;-webkit-user-select:none;-moz-user-select:none;user-select:none}
+.tmc-bio .bio-hint{
+  font-size:.7rem;letter-spacing:.15em;text-transform:uppercase;
+  color:var(--gold);margin-top:.9rem;
+  opacity:0;-webkit-transform:translateY(4px);transform:translateY(4px);
+  -webkit-transition:opacity .3s,-webkit-transform .3s;transition:opacity .3s,transform .3s;
+}
+.tmc-bio:hover .bio-hint,.tmc-bio:focus .bio-hint{opacity:1;-webkit-transform:translateY(0);transform:translateY(0)}
+.tmc-bio:focus{outline:var(--focus-ring);outline-offset:var(--focus-offset)}
+
+/* ── MODAL ── */
+.modal-overlay{
+  display:none;position:fixed;top:0;left:0;right:0;bottom:0;
+  background:rgba(15,12,8,.65);z-index:2000;
+  -webkit-box-align:center;-ms-flex-align:center;align-items:center;
+  -webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;
+  padding:2rem;
+  -webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);
+}
+.modal-overlay.open{display:-webkit-box;display:-ms-flexbox;display:flex}
+.modal-panel{
+  background:#fff;max-width:700px;width:100%;max-height:88vh;
+  overflow-y:auto;position:relative;
+  -webkit-animation:modalIn .35s ease;animation:modalIn .35s ease;
+  box-shadow:0 32px 80px rgba(0,0,0,.3);
+}
+@-webkit-keyframes modalIn{from{opacity:0;-webkit-transform:translateY(28px);transform:translateY(28px)}to{opacity:1;-webkit-transform:translateY(0);transform:translateY(0)}}
+@keyframes modalIn{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:translateY(0)}}
+.modal-hdr{
+  background:linear-gradient(135deg,#1a1a1a 0%,#231e15 100%);
+  padding:2.8rem 3rem;display:-webkit-box;display:-ms-flexbox;display:flex;
+  -webkit-box-align:center;-ms-flex-align:center;align-items:center;
+  gap:2rem;position:relative;overflow:hidden;
+}
+.modal-hdr::after{
+  content:'';position:absolute;top:0;right:0;bottom:0;width:50%;
+  background:radial-gradient(ellipse at 80% 50%,rgba(212,170,64,.08),transparent 65%);
+  pointer-events:none;
+}
+.modal-av{
+  width:82px;height:82px;border:1.5px solid rgba(212,170,64,.45);border-radius:50%;
+  display:-webkit-box;display:-ms-flexbox;display:flex;
+  -webkit-box-align:center;-ms-flex-align:center;align-items:center;
+  -webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;
+  font-family:'Playfair Display',serif;font-size:1.35rem;color:var(--gold-light);
+  background:rgba(255,255,255,.05);-ms-flex-negative:0;flex-shrink:0;position:relative;z-index:1;
+}
+.modal-info{position:relative;z-index:1}
+.modal-nome{font-family:'Playfair Display',serif;font-size:1.65rem;font-weight:400;color:#fff;line-height:1.2}
+.modal-ruolo{font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-light);margin-top:.4rem;font-weight:500}
+.modal-close{
+  position:absolute;top:1.2rem;right:1.5rem;z-index:2;
+  background:none;border:1px solid rgba(255,255,255,.2);color:rgba(255,255,255,.65);
+  width:36px;height:36px;cursor:pointer;font-size:1rem;
+  display:-webkit-box;display:-ms-flexbox;display:flex;
+  -webkit-box-align:center;-ms-flex-align:center;align-items:center;
+  -webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;
+  font-family:inherit;-webkit-transition:all .3s;transition:all .3s;
+}
+.modal-close:hover{background:rgba(255,255,255,.12);color:#fff;border-color:rgba(255,255,255,.5)}
+.modal-body{padding:2.5rem 3rem}
+.modal-stitle{
+  font-size:.68rem;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);
+  margin-bottom:.85rem;display:-webkit-box;display:-ms-flexbox;display:flex;
+  -webkit-box-align:center;-ms-flex-align:center;align-items:center;gap:.6rem;
+}
+.modal-stitle::before{content:'';width:20px;height:1.5px;background:var(--gold);display:block}
+.modal-sec{margin-bottom:2.2rem}
+.modal-ph{
+  background:var(--bg);border:1px dashed rgba(138,109,27,.3);
+  padding:2rem;text-align:center;color:var(--mut);
+  font-size:.95rem;font-weight:300;font-style:italic;line-height:1.7;
+}
+.modal-ph strong{color:var(--gold);font-style:normal;font-weight:500}
+@media(max-width:600px){
+  .modal-hdr{padding:2rem 1.5rem;gap:1.2rem}
+  .modal-body{padding:1.8rem 1.5rem}
+  .modal-nome{font-size:1.3rem}
+}
+
 /* ══════════════════════════════════════
    PRINT STYLES
    ══════════════════════════════════════ */
@@ -787,8 +903,8 @@ footer{background:#ede9e2;border-top:1px solid var(--brd)}
   <p class="etichetta cc-reveal cc-fade-up" aria-hidden="true">I nostri professionisti</p>
   <h2 class="titolo cc-reveal cc-fade-up cc-delay-2">Il <em>team</em> dello studio.</h2>
   <div class="tgg cc-stagger" style="grid-template-columns:repeat(3,1fr)">
-    <div class="tmc cc-reveal cc-scale-up cc-hover-lift"><div class="av" aria-hidden="true">NDF</div><div class="tnm">Nicola Di Foggia</div><div class="trl">Fondatore &amp; Titolare</div><div class="tsp">Dottore Commercialista &middot; Consulenza fiscale &middot; Societario &middot; Trust &middot; Crisi d'impresa &middot; Passaggio generazionale</div></div>
-    <div class="tmc cc-reveal cc-scale-up cc-hover-lift"><div class="av" aria-hidden="true">BDP</div><div class="tnm">Barbara De Propris</div><div class="trl">Partner</div><div class="tsp">Consulenza professionale &middot; Collaborazione strategica con lo studio</div></div>
+    <div class="tmc tmc-bio cc-reveal cc-scale-up" role="button" tabindex="0" data-profile="ndf" aria-label="Visualizza il profilo di Nicola Di Foggia"><div class="av" aria-hidden="true">NDF</div><div class="tnm">Nicola Di Foggia</div><div class="trl">Fondatore &amp; Titolare</div><div class="tsp">Dottore Commercialista &middot; Consulenza fiscale &middot; Societario &middot; Trust &middot; Crisi d'impresa &middot; Passaggio generazionale</div><div class="bio-hint">Scopri il profilo &rarr;</div></div>
+    <div class="tmc tmc-bio cc-reveal cc-scale-up" role="button" tabindex="0" data-profile="bdp" aria-label="Visualizza il profilo di Barbara De Propris"><div class="av" aria-hidden="true">BDP</div><div class="tnm">Barbara De Propris</div><div class="trl">Partner</div><div class="tsp">Consulenza professionale &middot; Collaborazione strategica con lo studio</div><div class="bio-hint">Scopri il profilo &rarr;</div></div>
     <div class="tmc cc-reveal cc-scale-up cc-hover-lift"><div class="av" aria-hidden="true">AS</div><div class="tnm">Andrea Scacchioli</div><div class="trl">Dottore Commercialista</div><div class="tsp">Consulenza fiscale e societaria</div></div>
     <div class="tmc cc-reveal cc-scale-up cc-hover-lift"><div class="av" aria-hidden="true">FG</div><div class="tnm">Francesca Guidi</div><div class="trl">Responsabile Contabile</div><div class="tsp">Supporto operativo e consulenza contabile</div></div>
     <div class="tmc cc-reveal cc-scale-up cc-hover-lift"><div class="av" aria-hidden="true">AR</div><div class="tnm">Alessandra Regnucci</div><div class="trl">Responsabile Contabile</div><div class="tsp">Supporto operativo e consulenza contabile</div></div>
@@ -876,6 +992,57 @@ footer{background:#ede9e2;border-top:1px solid var(--brd)}
 </section>
 
 </main>
+
+<!-- ══════════════════════════════════════
+     MODAL PROFILI
+     ══════════════════════════════════════ -->
+<div class="modal-overlay" id="modalProfilo" role="dialog" aria-modal="true" aria-labelledby="modalTitolo">
+  <div class="modal-panel">
+    <button class="modal-close" aria-label="Chiudi profilo">&times;</button>
+
+    <!-- NICOLA DI FOGGIA -->
+    <div id="modal-ndf">
+      <div class="modal-hdr">
+        <div class="modal-av" aria-hidden="true">NDF</div>
+        <div class="modal-info">
+          <div class="modal-nome" id="modalTitolo">Nicola Di Foggia</div>
+          <div class="modal-ruolo">Fondatore &amp; Titolare &mdash; Dottore Commercialista</div>
+        </div>
+      </div>
+      <div class="modal-body">
+        <div class="modal-sec">
+          <div class="modal-stitle">Chi &egrave;</div>
+          <div class="modal-ph"><strong>Biografia in arrivo.</strong><br/>In questo spazio verr&agrave; inserita la biografia professionale di Nicola Di Foggia, fondatore dello studio dal 1991.</div>
+        </div>
+        <div class="modal-sec">
+          <div class="modal-stitle">Curriculum Vitae</div>
+          <div class="modal-ph"><strong>CV in arrivo.</strong><br/>Il curriculum professionale dettagliato verr&agrave; aggiunto in un secondo momento.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- BARBARA DE PROPRIS -->
+    <div id="modal-bdp" style="display:none">
+      <div class="modal-hdr">
+        <div class="modal-av" aria-hidden="true">BDP</div>
+        <div class="modal-info">
+          <div class="modal-nome">Barbara De Propris</div>
+          <div class="modal-ruolo">Partner</div>
+        </div>
+      </div>
+      <div class="modal-body">
+        <div class="modal-sec">
+          <div class="modal-stitle">Chi &egrave;</div>
+          <div class="modal-ph"><strong>Biografia in arrivo.</strong><br/>In questo spazio verr&agrave; inserita la biografia professionale di Barbara De Propris, Partner dello studio.</div>
+        </div>
+        <div class="modal-sec">
+          <div class="modal-stitle">Curriculum Vitae</div>
+          <div class="modal-ph"><strong>CV in arrivo.</strong><br/>Il curriculum professionale dettagliato verr&agrave; aggiunto in un secondo momento.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 <!-- ══════════════════════════════════════
      JAVASCRIPT - Cross-browser compatible
@@ -1103,6 +1270,53 @@ footer{background:#ede9e2;border-top:1px solid var(--brd)}
       observer.observe(homeSection,{attributes:true});
     }
   }
+
+  // ── Modal profili ──
+  var modalOverlay=document.getElementById('modalProfilo');
+
+  function openModal(id){
+    var sections=['modal-ndf','modal-bdp'];
+    for(var s=0;s<sections.length;s++){
+      var el=document.getElementById(sections[s]);
+      if(el) el.style.display=(sections[s]===('modal-'+id))?'block':'none';
+    }
+    if(modalOverlay){
+      modalOverlay.className='modal-overlay open';
+      document.body.style.overflow='hidden';
+      var closeBtn=modalOverlay.querySelector('.modal-close');
+      if(closeBtn) setTimeout(function(){closeBtn.focus();},60);
+    }
+  }
+
+  function closeModal(){
+    if(modalOverlay){
+      modalOverlay.className='modal-overlay';
+      document.body.style.overflow='';
+    }
+  }
+
+  // Click sulle card bio
+  var bioCards=document.querySelectorAll('.tmc-bio');
+  for(var bc=0;bc<bioCards.length;bc++){
+    (function(card){
+      card.addEventListener('click',function(){openModal(card.getAttribute('data-profile'));},false);
+      card.addEventListener('keydown',function(e){
+        if(e.keyCode===13||e.keyCode===32){e.preventDefault();openModal(card.getAttribute('data-profile'));}
+      },false);
+    })(bioCards[bc]);
+  }
+
+  // Chiusura modal
+  if(modalOverlay){
+    modalOverlay.addEventListener('click',function(e){if(e.target===modalOverlay)closeModal();},false);
+  }
+  var closeBtns=document.querySelectorAll('.modal-close');
+  for(var cb=0;cb<closeBtns.length;cb++){
+    closeBtns[cb].addEventListener('click',closeModal,false);
+  }
+  document.addEventListener('keydown',function(e){
+    if(e.keyCode===27&&modalOverlay&&modalOverlay.className.indexOf('open')!==-1)closeModal();
+  },false);
 
 })();
 </script>

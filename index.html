@@ -816,10 +816,10 @@ footer{background:#ede9e2;border-top:1px solid var(--brd)}
     <p>Dalla consulenza ordinaria alle operazioni straordinarie, dal contenzioso tributario alla tutela patrimoniale: siete sempre seguiti dagli stessi professionisti che conoscono la vostra realt&agrave;.</p>
   </div>
   <div class="sec-ng cc-reveal cc-fade-left" aria-label="Numeri chiave">
-    <div class="nb"><div class="nn">12</div><div class="nl">Aree di pratica</div></div>
-    <div class="nb"><div class="nn">50+</div><div class="nl">Tipologie di servizio</div></div>
-    <div class="nb"><div class="nn">30+</div><div class="nl">Anni di esperienza</div></div>
-    <div class="nb"><div class="nn">100%</div><div class="nl">Su misura</div></div>
+    <div class="nb"><div class="nn" data-count="12" data-suffix="">0</div><div class="nl">Aree di pratica</div></div>
+    <div class="nb"><div class="nn" data-count="50" data-suffix="+">0</div><div class="nl">Tipologie di servizio</div></div>
+    <div class="nb"><div class="nn" data-count="30" data-suffix="+">0</div><div class="nl">Anni di esperienza</div></div>
+    <div class="nb"><div class="nn" data-count="100" data-suffix="%">0</div><div class="nl">Su misura</div></div>
   </div>
 </div>
 
@@ -1255,19 +1255,22 @@ footer{background:#ede9e2;border-top:1px solid var(--brd)}
   // Esegui al caricamento iniziale
   setTimeout(animateCounters,300);
 
-  // Osserva cambio pagina per ri-animare i counter
-  var observer=null;
+  // Osserva cambio pagina per ri-animare i counter (home + servizi)
   if(window.MutationObserver){
-    var homeSection=document.getElementById('page-home');
-    if(homeSection){
-      observer=new MutationObserver(function(mutations){
-        for(var m=0;m<mutations.length;m++){
-          if(mutations[m].attributeName==='class' && homeSection.className.indexOf('active')!==-1){
-            setTimeout(animateCounters,200);
-          }
+    var watchPages=['page-home','page-servizi'];
+    for(var wp=0;wp<watchPages.length;wp++){
+      (function(pageId){
+        var sec=document.getElementById(pageId);
+        if(sec){
+          new MutationObserver(function(mutations){
+            for(var m=0;m<mutations.length;m++){
+              if(mutations[m].attributeName==='class' && sec.className.indexOf('active')!==-1){
+                setTimeout(animateCounters,200);
+              }
+            }
+          }).observe(sec,{attributes:true});
         }
-      });
-      observer.observe(homeSection,{attributes:true});
+      })(watchPages[wp]);
     }
   }
 

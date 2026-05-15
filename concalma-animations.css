@@ -1,0 +1,459 @@
+/* ============================================================
+   CONCALMA ISLAND — Animation System
+   Coerente con il design system del sito:
+   - Colori: --blue #0000CC, --cta #FF6B35, --black #1E1E1E
+   - Font: Helvetica Neue, uppercase, weight 800-900
+   - Easing: cubic-bezier(.4,0,.2,1)
+   - Radius: 20px, pill 50px
+   - Vibe: Minimale, bold, elegante, festival premium
+   ============================================================ */
+
+/* === DESIGN TOKENS (riusa le variabili del sito) === */
+:root {
+  --cc-ease: cubic-bezier(.4, 0, .2, 1);
+  --cc-ease-out: cubic-bezier(0, 0, .2, 1);
+  --cc-ease-bounce: cubic-bezier(.34, 1.56, .64, 1);
+  --cc-duration: 0.8s;
+  --cc-duration-fast: 0.4s;
+  --cc-duration-slow: 1.2s;
+  --cc-stagger: 0.1s;
+}
+
+
+/* ============================================================
+   1. SCROLL REVEAL — Entrata elementi allo scroll
+   Aggiungere la classe desiderata + "cc-reveal" agli elementi.
+   Il JS aggiunge ".cc-visible" quando entrano nel viewport.
+   ============================================================ */
+
+/* Base: tutti gli elementi reveal partono invisibili */
+.cc-reveal {
+  opacity: 0;
+  will-change: transform, opacity;
+  transition:
+    opacity var(--cc-duration) var(--cc-ease),
+    transform var(--cc-duration) var(--cc-ease);
+}
+
+.cc-reveal.cc-visible {
+  opacity: 1;
+  transform: none !important;
+}
+
+/* Fade Up (default ConCalma style) */
+.cc-fade-up {
+  transform: translateY(40px);
+}
+
+/* Fade Down */
+.cc-fade-down {
+  transform: translateY(-40px);
+}
+
+/* Fade Left */
+.cc-fade-left {
+  transform: translateX(-60px);
+}
+
+/* Fade Right */
+.cc-fade-right {
+  transform: translateX(60px);
+}
+
+/* Scale Up — per immagini e card */
+.cc-scale-up {
+  transform: scale(0.9);
+}
+
+/* Scale Down — reveal da grande a piccolo */
+.cc-scale-down {
+  transform: scale(1.1);
+}
+
+/* Clip Reveal — rivela dal basso con clip-path */
+.cc-clip-up {
+  clip-path: inset(100% 0 0 0);
+  transform: none;
+}
+.cc-clip-up.cc-visible {
+  clip-path: inset(0 0 0 0);
+  transition:
+    clip-path var(--cc-duration-slow) var(--cc-ease),
+    opacity var(--cc-duration) var(--cc-ease);
+}
+
+/* Clip Reveal orizzontale — rivela da sinistra */
+.cc-clip-left {
+  clip-path: inset(0 100% 0 0);
+  transform: none;
+}
+.cc-clip-left.cc-visible {
+  clip-path: inset(0 0 0 0);
+  transition:
+    clip-path var(--cc-duration-slow) var(--cc-ease),
+    opacity var(--cc-duration) var(--cc-ease);
+}
+
+/* Blur In — sfocatura che si risolve */
+.cc-blur-in {
+  transform: translateY(20px);
+  filter: blur(10px);
+}
+.cc-blur-in.cc-visible {
+  filter: blur(0);
+  transition:
+    opacity var(--cc-duration) var(--cc-ease),
+    transform var(--cc-duration) var(--cc-ease),
+    filter var(--cc-duration-slow) var(--cc-ease);
+}
+
+/* Rotate In — leggera rotazione */
+.cc-rotate-in {
+  transform: translateY(30px) rotate(3deg);
+}
+
+
+/* ============================================================
+   2. STAGGER — Animazioni scaglionate per gruppi
+   Il container ha .cc-stagger, i figli si animano uno dopo l'altro.
+   ============================================================ */
+
+.cc-stagger > .cc-reveal:nth-child(1)  { transition-delay: calc(var(--cc-stagger) * 0); }
+.cc-stagger > .cc-reveal:nth-child(2)  { transition-delay: calc(var(--cc-stagger) * 1); }
+.cc-stagger > .cc-reveal:nth-child(3)  { transition-delay: calc(var(--cc-stagger) * 2); }
+.cc-stagger > .cc-reveal:nth-child(4)  { transition-delay: calc(var(--cc-stagger) * 3); }
+.cc-stagger > .cc-reveal:nth-child(5)  { transition-delay: calc(var(--cc-stagger) * 4); }
+.cc-stagger > .cc-reveal:nth-child(6)  { transition-delay: calc(var(--cc-stagger) * 5); }
+.cc-stagger > .cc-reveal:nth-child(7)  { transition-delay: calc(var(--cc-stagger) * 6); }
+.cc-stagger > .cc-reveal:nth-child(8)  { transition-delay: calc(var(--cc-stagger) * 7); }
+.cc-stagger > .cc-reveal:nth-child(9)  { transition-delay: calc(var(--cc-stagger) * 8); }
+.cc-stagger > .cc-reveal:nth-child(10) { transition-delay: calc(var(--cc-stagger) * 9); }
+.cc-stagger > .cc-reveal:nth-child(11) { transition-delay: calc(var(--cc-stagger) * 10); }
+.cc-stagger > .cc-reveal:nth-child(12) { transition-delay: calc(var(--cc-stagger) * 11); }
+
+
+/* ============================================================
+   3. HOVER EFFECTS — Coerenti con lo stile ConCalma
+   ============================================================ */
+
+/* Card Lift — usato su package-card, accom-card, dj-card */
+.cc-hover-lift {
+  transition:
+    transform var(--cc-duration-fast) var(--cc-ease),
+    box-shadow var(--cc-duration-fast) var(--cc-ease);
+}
+.cc-hover-lift:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, .12);
+}
+
+/* Card Lift + Glow blu */
+.cc-hover-glow:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 50px rgba(0, 0, 204, .2);
+}
+
+/* CTA Button pulse — per il bottone PRENOTA */
+.cc-hover-cta {
+  transition:
+    background var(--cc-duration-fast) var(--cc-ease),
+    transform var(--cc-duration-fast) var(--cc-ease),
+    box-shadow var(--cc-duration-fast) var(--cc-ease);
+}
+.cc-hover-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 35px rgba(255, 107, 53, .5);
+}
+
+/* Image Zoom — per gallery e foto artisti */
+.cc-hover-zoom {
+  overflow: hidden;
+  border-radius: var(--radius, 20px);
+}
+.cc-hover-zoom img {
+  transition: transform var(--cc-duration) var(--cc-ease);
+}
+.cc-hover-zoom:hover img {
+  transform: scale(1.08);
+}
+
+/* Tilt — leggero effetto 3D al hover */
+.cc-hover-tilt {
+  transition: transform var(--cc-duration-fast) var(--cc-ease);
+  transform-style: preserve-3d;
+}
+
+/* Underline Expand — per link nel menu */
+.cc-hover-underline {
+  position: relative;
+}
+.cc-hover-underline::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--blue, #0000CC);
+  transition: width var(--cc-duration-fast) var(--cc-ease);
+}
+.cc-hover-underline:hover::after {
+  width: 100%;
+}
+
+/* Border Draw — bordo che si disegna al hover */
+.cc-hover-border {
+  position: relative;
+  overflow: hidden;
+}
+.cc-hover-border::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border: 2px solid var(--blue, #0000CC);
+  border-radius: inherit;
+  opacity: 0;
+  transform: scale(1.1);
+  transition:
+    opacity var(--cc-duration-fast) var(--cc-ease),
+    transform var(--cc-duration-fast) var(--cc-ease);
+}
+.cc-hover-border:hover::before {
+  opacity: 1;
+  transform: scale(1);
+}
+
+
+/* ============================================================
+   4. KEYFRAME ANIMATIONS — Loop e effetti speciali
+   ============================================================ */
+
+/* Float — per logo e elementi decorativi */
+@keyframes cc-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+.cc-float {
+  animation: cc-float 3s var(--cc-ease) infinite;
+}
+
+/* Pulse — per badge e notifiche */
+@keyframes cc-pulse {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.05); opacity: 0.85; }
+}
+.cc-pulse {
+  animation: cc-pulse 2s var(--cc-ease) infinite;
+}
+
+/* Pulse Glow — glow blu pulsante */
+@keyframes cc-pulse-glow {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(0, 0, 204, 0.4); }
+  50% { box-shadow: 0 0 0 12px rgba(0, 0, 204, 0); }
+}
+.cc-pulse-glow {
+  animation: cc-pulse-glow 2s var(--cc-ease) infinite;
+}
+
+/* Pulse CTA — glow arancione per bottoni prenotazione */
+@keyframes cc-pulse-cta {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(255, 107, 53, 0.5); }
+  50% { box-shadow: 0 0 0 14px rgba(255, 107, 53, 0); }
+}
+.cc-pulse-cta {
+  animation: cc-pulse-cta 2.5s var(--cc-ease) infinite;
+}
+
+/* Shimmer — effetto luce che scorre (per titoli o CTA) */
+@keyframes cc-shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+.cc-shimmer {
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255,255,255,0.15) 50%,
+    transparent 100%
+  );
+  background-size: 200% 100%;
+  animation: cc-shimmer 3s linear infinite;
+}
+
+/* Marquee — testo scorrevole orizzontale */
+@keyframes cc-marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.cc-marquee {
+  display: flex;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.cc-marquee__inner {
+  display: flex;
+  animation: cc-marquee 20s linear infinite;
+}
+.cc-marquee:hover .cc-marquee__inner {
+  animation-play-state: paused;
+}
+
+/* Ticker verticale — per countdown o stats */
+@keyframes cc-ticker {
+  0% { transform: translateY(100%); opacity: 0; }
+  10% { transform: translateY(0); opacity: 1; }
+  90% { transform: translateY(0); opacity: 1; }
+  100% { transform: translateY(-100%); opacity: 0; }
+}
+
+/* Spin — per loader o icone */
+@keyframes cc-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+.cc-spin {
+  animation: cc-spin 1.5s linear infinite;
+}
+
+/* Draw Line — per divisori decorativi */
+@keyframes cc-draw-line {
+  from { width: 0; }
+  to { width: 100%; }
+}
+.cc-draw-line {
+  height: 2px;
+  background: var(--blue, #0000CC);
+  animation: cc-draw-line var(--cc-duration-slow) var(--cc-ease-out) forwards;
+}
+
+
+/* ============================================================
+   5. PARALLAX — Classi per il parallax gestito dal JS
+   ============================================================ */
+
+.cc-parallax {
+  will-change: transform;
+  transition: transform 0.1s linear;
+}
+
+.cc-parallax-slow { /* Data-speed gestito dal JS */ }
+.cc-parallax-medium { }
+.cc-parallax-fast { }
+
+
+/* ============================================================
+   6. TEXT ANIMATIONS — Per titoli e testo hero
+   ============================================================ */
+
+/* Split Text — ogni lettera/parola animata separatamente */
+.cc-split-word {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(100%);
+  transition:
+    opacity var(--cc-duration) var(--cc-ease),
+    transform var(--cc-duration) var(--cc-ease);
+}
+.cc-visible .cc-split-word {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Counter — per numeri che contano (gestito dal JS) */
+.cc-counter {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Typewriter */
+@keyframes cc-typewriter {
+  from { width: 0; }
+  to { width: 100%; }
+}
+@keyframes cc-blink {
+  50% { border-color: transparent; }
+}
+.cc-typewriter {
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid var(--blue, #0000CC);
+  width: 0;
+  animation:
+    cc-typewriter 3s steps(40) forwards,
+    cc-blink 0.75s step-end infinite;
+}
+
+
+/* ============================================================
+   7. PAGE TRANSITIONS — Transizioni tra sezioni/pagine
+   ============================================================ */
+
+/* Fade overlay per transizioni pagina */
+.cc-page-transition {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: var(--blue, #0000CC);
+  transform: scaleY(0);
+  transform-origin: bottom;
+  transition: transform 0.6s var(--cc-ease);
+}
+.cc-page-transition.cc-active {
+  transform: scaleY(1);
+  transform-origin: top;
+}
+
+/* Wipe — transizione a tendina */
+.cc-wipe {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: var(--black, #1E1E1E);
+  transform: translateX(-100%);
+  transition: transform 0.7s var(--cc-ease);
+}
+.cc-wipe.cc-active {
+  transform: translateX(0);
+}
+
+
+/* ============================================================
+   8. UTILITIES
+   ============================================================ */
+
+/* Delay utilities */
+.cc-delay-1 { transition-delay: 0.1s !important; }
+.cc-delay-2 { transition-delay: 0.2s !important; }
+.cc-delay-3 { transition-delay: 0.3s !important; }
+.cc-delay-4 { transition-delay: 0.4s !important; }
+.cc-delay-5 { transition-delay: 0.5s !important; }
+.cc-delay-6 { transition-delay: 0.6s !important; }
+.cc-delay-7 { transition-delay: 0.7s !important; }
+.cc-delay-8 { transition-delay: 0.8s !important; }
+
+/* Duration overrides */
+.cc-fast { --cc-duration: 0.4s; }
+.cc-slow { --cc-duration: 1.2s; }
+.cc-very-slow { --cc-duration: 1.8s; }
+
+/* Easing overrides */
+.cc-bounce { --cc-ease: cubic-bezier(.34, 1.56, .64, 1); }
+
+/* Reduced motion — rispetta preferenze utente */
+@media (prefers-reduced-motion: reduce) {
+  .cc-reveal,
+  .cc-float,
+  .cc-pulse,
+  .cc-pulse-glow,
+  .cc-pulse-cta,
+  .cc-marquee__inner,
+  .cc-shimmer,
+  .cc-typewriter,
+  .cc-parallax {
+    animation: none !important;
+    transition: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+    filter: none !important;
+    clip-path: none !important;
+  }
+}

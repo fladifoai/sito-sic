@@ -1003,6 +1003,45 @@ section[aria-label="Note informative sui servizi"] > div{margin-top:var(--head-g
 .pil{color:var(--gold)}
 
 /* ══════════════════════════════════════
+   CONTENITORE CENTRATO (schermi larghi)
+   Il contenuto sta in una colonna di max 1240px centrata;
+   gli sfondi delle sezioni restano a tutta larghezza.
+   ══════════════════════════════════════ */
+:root{--wrap:1240px;--px:max(3.5rem,calc((100vw - var(--wrap)) / 2))}
+@media(min-width:1061px){
+  nav,.hero,.intestazione,.sec-pillars,.sec-aree,.sec-tl,.sec-val,.sec-tmg,.sec-sett,
+  .sec-2col,.sec-tab,.sec-form,.ctab,.crow,footer,#cookie-banner,
+  section[aria-label="Chi assistiamo"],section[aria-label="Domande frequenti"],
+  section[aria-label="Note informative sui servizi"]{padding-left:var(--px)!important;padding-right:var(--px)!important}
+  .tabn{margin-left:calc(-1 * var(--px));margin-right:calc(-1 * var(--px));padding-left:var(--px);padding-right:var(--px)}
+  section[aria-label="Chi assistiamo"] > div{max-width:none!important}
+  section[aria-label="Domande frequenti"] > div{max-width:none!important;display:grid;grid-template-columns:1fr 1fr;column-gap:4rem;align-items:start}
+  section[aria-label="Note informative sui servizi"] > div{max-width:none!important;grid-template-columns:repeat(3,1fr)!important}
+  .crow{grid-template-columns:260px 1fr}
+  .tabb{padding:.85rem .95rem;letter-spacing:.06em}
+  /* Team: niente celle vuote colorate; l'ultima card va al centro */
+  .tgg{background:none}
+  .tmc{box-shadow:0 0 0 1px var(--brd)}
+  .tgg > :last-child:nth-child(3n+1){grid-column:2}
+}
+
+/* ══════════════════════════════════════
+   CONTRASTO PIÙ DECISO
+   Testo secondario più scuro, sezioni alterne distinguibili,
+   bordi delle card visibili.
+   ══════════════════════════════════════ */
+:root{
+  --mut:#383838;                    /* testo secondario: 11.6:1 su bianco (era 8.9:1) */
+  --bg:#f2ede4;                     /* sezioni alterne: si distinguono dal bianco */
+  --bg2:#e8e1d4;
+  --brd:rgba(125,99,24,.32);        /* bordi card più visibili */
+}
+footer{background:var(--bg2)}
+.hero{background:linear-gradient(135deg,#ffffff 0%,#f7f3ec 55%,#efe8dc 100%)}
+.intestazione{background:linear-gradient(135deg,#f5f1ea 0%,#e9e2d5 100%)}
+h1,h2,h3,.titolo,.tnm,.tlt{color:var(--txt)}
+
+/* ══════════════════════════════════════
    MOBILE — adattamento a tutti i telefoni
    (blocco finale: prevale sulle regole "luxury" precedenti)
    ══════════════════════════════════════ */

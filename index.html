@@ -983,6 +983,25 @@ section[aria-label="Note informative sui servizi"] > div{margin-top:var(--head-g
 .tsp,.svc li,.ac p,.sl,.nl{color:var(--mut)}
 
 /* ══════════════════════════════════════
+   ACCENTO ORO: un solo ruolo
+   L'oro segnala le azioni (pulsanti, link, voce attiva del menu).
+   Etichette, numeri e ruoli tornano neutri; il trattino oro resta
+   come piccolo segno di marca.
+   Corsivo oro solo nell'apertura della home e nella call-to-action.
+   ══════════════════════════════════════ */
+.titolo em,.crow-hdr h3 em{font-style:normal;color:inherit}
+.intestazione h1 em{color:inherit}
+.etichetta,.hero-tag,.testo-col p.etichetta{color:var(--mut)}
+.etichetta::before,.hero-tag::before{background:var(--gold)}
+.sn,.nn,.ai{color:var(--txt)}
+.ac:hover .ai{color:var(--txt)}
+.sf strong{color:var(--txt)}
+.trl,.tla,.il,.trt,.cit cite,.fc2 h5,.modal-stitle{color:var(--mut)}
+.tld{color:var(--txt)}
+.svc:hover h4{color:var(--txt)}
+.pil{color:var(--gold)}
+
+/* ══════════════════════════════════════
    MOBILE — adattamento a tutti i telefoni
    (blocco finale: prevale sulle regole "luxury" precedenti)
    ══════════════════════════════════════ */

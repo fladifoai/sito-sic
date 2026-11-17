@@ -44,7 +44,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 
 <!-- ══ FONTS ══ -->
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet"/>
 <link rel="stylesheet" href="concalma-animations.css"/>
 
 <!-- ══ SCHEMA MARKUP JSON-LD ══ -->
@@ -227,7 +227,7 @@
 :root{
   --w:#fff;--bg:#f7f5f2;--bg2:#eeebe6;
   /* WCAG AA: gold scurito per contrasto >=4.5:1 su bianco */
-  --gold:#8a6d1b;--gold2:#a07e22;
+  --gold:#7d6318;--gold2:#a07e22;
   /* gold decorativo (usato solo su sfondi scuri dove ha contrasto sufficiente) */
   --gold-light:#d4aa40;
   --txt:#1a1a1a;--mut:#4a4a4a;/* scurito da #6b6b6b per contrasto AA */
@@ -277,7 +277,7 @@ nav[role="navigation"]{position:fixed}
 .logo-box small{font-size:.35rem;letter-spacing:.15em;color:var(--gold);text-transform:uppercase;position:relative;z-index:1}
 .logo-txt{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column}
 .logo-main{font-family:'Playfair Display',serif;font-size:.85rem;font-weight:700;color:var(--gold);letter-spacing:.1em;line-height:1.3}
-.logo-sub{font-size:.6rem;font-weight:300;letter-spacing:.2em;text-transform:uppercase;color:var(--mut);margin-top:2px}
+.logo-sub{font-size:.6rem;font-weight:400;letter-spacing:.2em;text-transform:uppercase;color:var(--mut);margin-top:2px}
 .nav-links{display:-webkit-box;display:-ms-flexbox;display:flex;list-style:none;gap:.2rem}
 .nav-links a{font-size:.75rem;letter-spacing:.15em;text-transform:uppercase;color:var(--mut);text-decoration:none;padding:.5rem .9rem;display:block;-webkit-transition:color .3s;transition:color .3s;position:relative}
 .nav-links a::after{content:'';position:absolute;bottom:0;left:.9rem;right:.9rem;height:2px;background:var(--gold);-webkit-transform:scaleX(0);transform:scaleX(0);-webkit-transition:-webkit-transform .3s;transition:transform .3s}
@@ -292,7 +292,7 @@ nav[role="navigation"]{position:fixed}
 /* ══════════════════════════════════════
    COMPONENTI COMUNI
    ══════════════════════════════════════ */
-.etichetta{font-size:.75rem;letter-spacing:.35em;text-transform:uppercase;color:var(--gold);display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;gap:.8rem;margin-bottom:.9rem;font-weight:500}
+.etichetta{font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;gap:.8rem;margin-bottom:.9rem;font-weight:500}
 .etichetta::before{content:'';width:24px;height:1.5px;background:var(--gold);display:block}
 .titolo{font-family:'Playfair Display',serif;font-size:clamp(1.85rem,3vw,2.8rem);font-weight:400;line-height:1.2;margin-bottom:1.1rem}
 .titolo em{font-style:italic;color:var(--gold2)}
@@ -304,7 +304,7 @@ nav[role="navigation"]{position:fixed}
 .intestazione{background:var(--bg);padding:4rem 3.5rem 3rem;border-bottom:1px solid var(--brd)}
 .intestazione h1{font-family:'Playfair Display',serif;font-size:clamp(2.2rem,4vw,3.5rem);font-weight:400;line-height:1.1;margin:.6rem 0 1rem}
 .intestazione h1 em{font-style:italic;color:var(--gold2)}
-.intestazione p{font-size:1rem;font-weight:300;line-height:1.85;color:var(--mut);max-width:580px}
+.intestazione p{font-size:1rem;font-weight:400;line-height:1.7;color:var(--mut);max-width:580px}
 
 /* ══════════════════════════════════════
    FOOTER
@@ -313,14 +313,14 @@ footer{background:var(--bg2);border-top:1px solid var(--brd);padding:3.5rem 3.5r
 .fg{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:2.5rem;margin-bottom:2.5rem}
 .fn{font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:var(--gold);letter-spacing:.15em}
 .fs2{font-size:.65rem;letter-spacing:.18em;text-transform:uppercase;color:var(--mut);margin-top:2px;margin-bottom:.8rem}
-.fc2 p{font-size:.875rem;font-weight:300;color:var(--mut);line-height:1.75}
-.fc2 h5{font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:.9rem}
+.fc2 p{font-size:.875rem;font-weight:400;color:var(--mut);line-height:1.7}
+.fc2 h5{font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:.9rem}
 .fc2 ul{list-style:none}
 .fc2 li{margin-bottom:.45rem}
-.fc2 li a,.fc2 li span{font-size:.875rem;font-weight:300;color:var(--mut);text-decoration:none;cursor:pointer;-webkit-transition:color .3s;transition:color .3s;display:block}
+.fc2 li a,.fc2 li span{font-size:.875rem;font-weight:400;color:var(--mut);text-decoration:none;cursor:pointer;-webkit-transition:color .3s;transition:color .3s;display:block}
 .fc2 li a:hover,.fc2 li span:hover{color:var(--gold)}
 .fb2{border-top:1px solid var(--brd);padding-top:1.6rem;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-ms-flex-wrap:wrap;flex-wrap:wrap;gap:.7rem}
-.fb2 span{font-size:.8rem;font-weight:300;color:var(--mut)}
+.fb2 span{font-size:.8rem;font-weight:400;color:var(--mut)}
 
 /* ══════════════════════════════════════
    HOME
@@ -328,12 +328,12 @@ footer{background:var(--bg2);border-top:1px solid var(--brd);padding:3.5rem 3.5r
 .hero{min-height:calc(100vh - 68px);display:grid;grid-template-columns:1.1fr 1fr;-webkit-box-align:center;-ms-flex-align:center;align-items:center;padding:4rem 3.5rem 3rem;gap:4rem;position:relative;overflow:hidden;background:var(--w)}
 .hero-bg{position:absolute;top:0;right:0;bottom:0;left:0;background:radial-gradient(ellipse 60% 70% at 90% 50%,rgba(138,109,27,.05),transparent 65%);pointer-events:none}
 .hero-sx{position:relative;z-index:1}
-.hero-tag{font-size:.75rem;letter-spacing:.35em;text-transform:uppercase;color:var(--gold);margin-bottom:1.7rem;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;gap:.85rem;font-weight:500}
+.hero-tag{font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:1.7rem;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;gap:.85rem;font-weight:500}
 .hero-tag::before{content:'';width:28px;height:1.5px;background:var(--gold)}
 .hero-sx h1{font-family:'Playfair Display',serif;font-size:clamp(2.7rem,5vw,4.8rem);font-weight:400;line-height:1.08}
 .hero-sx h1 em{font-style:italic;color:var(--gold2)}
 .hero-sx h1 strong{font-weight:700;display:block}
-.hero-desc{margin-top:1.5rem;font-size:1rem;font-weight:300;line-height:1.85;color:var(--mut);max-width:490px}
+.hero-desc{margin-top:1.5rem;font-size:1rem;font-weight:400;line-height:1.7;color:var(--mut);max-width:490px}
 .hero-btn{margin-top:2.2rem;display:-webkit-box;display:-ms-flexbox;display:flex;gap:1rem;-ms-flex-wrap:wrap;flex-wrap:wrap}
 .hero-dx{position:relative;z-index:1}
 .sg{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--brd)}
@@ -341,7 +341,7 @@ footer{background:var(--bg2);border-top:1px solid var(--brd);padding:3.5rem 3.5r
 .sb:hover{border-color:var(--gold)}
 .sn{font-family:'Playfair Display',serif;font-size:2.6rem;font-weight:400;color:var(--gold);line-height:1}
 .sl{font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;color:var(--mut);margin-top:.35rem}
-.sf{grid-column:1/-1;background:var(--bg);padding:1.1rem;text-align:center;font-size:.85rem;font-weight:300;color:var(--mut);border-top:1px solid var(--brd)}
+.sf{grid-column:1/-1;background:var(--bg);padding:1.1rem;text-align:center;font-size:.85rem;font-weight:400;color:var(--mut);border-top:1px solid var(--brd)}
 .sf strong{color:var(--gold);font-weight:500}
 
 .sec-pillars{background:var(--bg);padding:5rem 3.5rem}
@@ -352,7 +352,7 @@ footer{background:var(--bg2);border-top:1px solid var(--brd);padding:3.5rem 3.5r
 .pi:hover::after,.pi:focus::after{-webkit-transform:scaleX(1);transform:scaleX(1)}
 .pin{font-family:'Playfair Display',serif;font-size:2.7rem;color:rgba(138,109,27,.15);font-weight:700;line-height:1;margin-bottom:.9rem}
 .pi h3{font-family:'Playfair Display',serif;font-size:1.18rem;font-weight:600;margin-bottom:.65rem}
-.pi p{font-size:.95rem;font-weight:300;line-height:1.75;color:var(--mut);margin-bottom:.9rem}
+.pi p{font-size:.95rem;font-weight:400;line-height:1.7;color:var(--mut);margin-bottom:.9rem}
 .pil{font-size:.75rem;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);font-weight:500}
 
 .sec-aree{background:var(--w);padding:5rem 3.5rem}
@@ -361,18 +361,18 @@ footer{background:var(--bg2);border-top:1px solid var(--brd);padding:3.5rem 3.5r
 .ac:hover,.ac:focus{background:var(--bg);border-color:var(--gold)}
 .ai{font-family:'Playfair Display',serif;font-size:1.5rem;color:var(--gold);margin-bottom:.65rem;font-style:italic}
 .ac h4{font-size:.95rem;font-weight:500;margin-bottom:.38rem}
-.ac p{font-size:.875rem;font-weight:300;color:var(--mut);line-height:1.6}
+.ac p{font-size:.875rem;font-weight:400;color:var(--mut);line-height:1.6}
 
 .ctab{background:var(--dk);padding:4.5rem 3.5rem;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;gap:3rem}
 .ctab h2{font-family:'Playfair Display',serif;font-size:2rem;font-weight:400;color:#fff;margin-bottom:.65rem}
 .ctab h2 em{font-style:italic;color:var(--gold-light)}
-.ctab p{font-size:1rem;font-weight:300;color:rgba(255,255,255,.6);line-height:1.7;max-width:500px}
+.ctab p{font-size:1rem;font-weight:400;color:rgba(255,255,255,.6);line-height:1.7;max-width:500px}
 
 /* ══════════════════════════════════════
    LO STUDIO
    ══════════════════════════════════════ */
 .sec-2col{background:var(--w);padding:5rem 3.5rem;display:grid;grid-template-columns:1fr 1fr;gap:5rem;-webkit-box-align:center;-ms-flex-align:center;align-items:center}
-.testo-col p{font-size:1rem;font-weight:300;line-height:1.9;color:var(--mut);margin-bottom:1rem}
+.testo-col p{font-size:1rem;font-weight:400;line-height:1.7;color:var(--mut);margin-bottom:1rem}
 .testo-col p strong{color:var(--txt);font-weight:500}
 .cit{background:var(--bg);padding:2.6rem;border-left:3px solid var(--gold);position:relative}
 .cit::before{content:'\201C';font-family:'Playfair Display',serif;font-size:5rem;color:rgba(138,109,27,.12);position:absolute;top:-1rem;left:1.2rem;line-height:1}
@@ -386,7 +386,7 @@ footer{background:var(--bg2);border-top:1px solid var(--brd);padding:3.5rem 3.5r
 .tld{width:40px;height:40px;border:1.5px solid var(--gold);border-radius:50%;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;font-family:'Playfair Display',serif;font-size:.75rem;color:var(--gold);font-weight:700;-ms-flex-negative:0;flex-shrink:0;background:var(--bg);position:relative;z-index:1}
 .tla{font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:.28rem;font-weight:500}
 .tlt{font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:600;margin-bottom:.32rem}
-.tlx{font-size:1rem;font-weight:300;color:var(--mut);line-height:1.72}
+.tlx{font-size:1rem;font-weight:400;color:var(--mut);line-height:1.7}
 .tlx strong{color:var(--txt);font-weight:500}
 
 .sec-val{background:var(--w);padding:5rem 3.5rem}
@@ -396,7 +396,7 @@ footer{background:var(--bg2);border-top:1px solid var(--brd);padding:3.5rem 3.5r
 .vc:hover{background:var(--bg)}.vc:hover::after{-webkit-transform:scaleX(1);transform:scaleX(1)}
 .vl{font-family:'Playfair Display',serif;font-size:2.8rem;color:rgba(138,109,27,.15);font-weight:700;line-height:1;margin-bottom:.85rem}
 .vc h3{font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:600;margin-bottom:.55rem}
-.vc p{font-size:.95rem;font-weight:300;line-height:1.72;color:var(--mut)}
+.vc p{font-size:.95rem;font-weight:400;line-height:1.7;color:var(--mut)}
 
 /* ══════════════════════════════════════
    SERVIZI
@@ -418,7 +418,7 @@ footer{background:var(--bg2);border-top:1px solid var(--brd);padding:3.5rem 3.5r
 .svc:hover{background:#fdfcfa}
 .svc h4{font-size:1rem;font-weight:500;margin-bottom:.65rem;padding-bottom:.5rem;border-bottom:1px solid var(--brd)}
 .svc ul{list-style:none}
-.svc li{font-size:.9rem;font-weight:300;color:var(--mut);padding:.3rem 0;display:-webkit-box;display:-ms-flexbox;display:flex;gap:.5rem;-webkit-box-align:start;-ms-flex-align:start;align-items:flex-start;border-bottom:1px solid rgba(0,0,0,.04);line-height:1.5}
+.svc li{font-size:.9rem;font-weight:400;color:var(--mut);padding:.3rem 0;display:-webkit-box;display:-ms-flexbox;display:flex;gap:.5rem;-webkit-box-align:start;-ms-flex-align:start;align-items:flex-start;border-bottom:1px solid rgba(0,0,0,.04);line-height:1.5}
 .svc li::before{content:'\2013';color:var(--gold);font-size:.75rem;-ms-flex-negative:0;flex-shrink:0;margin-top:2px}
 
 /* ══════════════════════════════════════
@@ -432,17 +432,17 @@ footer{background:var(--bg2);border-top:1px solid var(--brd);padding:3.5rem 3.5r
 .tmc:hover .av{border-color:var(--gold)}
 .tnm{font-family:'Playfair Display',serif;font-size:1rem;font-weight:600;margin-bottom:.22rem}
 .trl{font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:.65rem}
-.tsp{font-size:.875rem;font-weight:300;color:var(--mut);line-height:1.5}
+.tsp{font-size:.875rem;font-weight:400;color:var(--mut);line-height:1.5}
 
 .qlf{background:var(--bg);padding:2.2rem;border:1px solid var(--brd)}
 .qlf h4{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:600;margin-bottom:.85rem}
 .qlf ul{list-style:none}
-.qlf li{font-size:.95rem;font-weight:300;color:var(--mut);padding:.42rem 0;border-bottom:1px solid var(--brd);display:-webkit-box;display:-ms-flexbox;display:flex;gap:.65rem;-webkit-box-align:start;-ms-flex-align:start;align-items:flex-start}
+.qlf li{font-size:.95rem;font-weight:400;color:var(--mut);padding:.42rem 0;border-bottom:1px solid var(--brd);display:-webkit-box;display:-ms-flexbox;display:flex;gap:.65rem;-webkit-box-align:start;-ms-flex-align:start;align-items:flex-start}
 .qlf li::before{content:'\2022';color:var(--gold);font-size:.65rem;margin-top:4px;-ms-flex-negative:0;flex-shrink:0}
 
 .sec-sett{background:var(--w);padding:5rem 3.5rem}
 .stg{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;gap:.5rem;margin-top:1.8rem}
-.stk{padding:.5rem 1rem;border:1px solid var(--brd);font-size:.85rem;font-weight:300;color:var(--mut);-webkit-transition:all .3s;transition:all .3s}
+.stk{padding:.5rem 1rem;border:1px solid var(--brd);font-size:.85rem;font-weight:400;color:var(--mut);-webkit-transition:all .3s;transition:all .3s}
 .stk:hover{border-color:var(--gold);color:var(--gold)}
 
 /* ══════════════════════════════════════
@@ -456,7 +456,7 @@ footer{background:var(--bg2);border-top:1px solid var(--brd);padding:3.5rem 3.5r
 .crow-hdr h3 em{font-style:italic;color:var(--gold2)}
 .ir{display:-webkit-box;display:-ms-flexbox;display:flex;gap:1.2rem;-webkit-box-align:start;-ms-flex-align:start;align-items:flex-start;padding:.8rem 0;border-bottom:1px solid var(--brd);width:100%}
 .il{font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);min-width:66px;margin-top:2px;-ms-flex-negative:0;flex-shrink:0;font-weight:500}
-.iv{font-size:1rem;font-weight:300;color:var(--txt);line-height:1.55}
+.iv{font-size:1rem;font-weight:400;color:var(--txt);line-height:1.55}
 .iv a{color:var(--gold);text-decoration:none;font-weight:500}
 .iv a:hover,.iv a:focus{text-decoration:underline}
 .mw{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;gap:.75rem;border-top:1px solid var(--brd);padding-top:.8rem}
@@ -468,7 +468,7 @@ footer{background:var(--bg2);border-top:1px solid var(--brd);padding:3.5rem 3.5r
 .tri{display:-webkit-box;display:-ms-flexbox;display:flex;gap:1rem;-webkit-box-align:start;-ms-flex-align:start;align-items:flex-start;background:var(--w);padding:.9rem 1.1rem}
 .crow.g .tri{background:var(--bg)}
 .trt{font-size:.7rem;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);min-width:48px;margin-top:2px;-ms-flex-negative:0;flex-shrink:0;font-weight:500}
-.tri span:last-child{font-size:.95rem;font-weight:300;color:var(--txt);line-height:1.5}
+.tri span:last-child{font-size:.95rem;font-weight:400;color:var(--txt);line-height:1.5}
 
 /* Form contatti */
 .sec-form{background:var(--bg);padding:4rem 3.5rem 5.5rem;border-top:1px solid var(--brd)}
@@ -824,7 +824,7 @@ footer{background:#ede9e2;border-top:1px solid var(--brd)}
 }
 .modal-info{position:relative;z-index:1}
 .modal-nome{font-family:'Playfair Display',serif;font-size:1.65rem;font-weight:400;color:#fff;line-height:1.2}
-.modal-ruolo{font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-light);margin-top:.4rem;font-weight:500}
+.modal-ruolo{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-light);margin-top:.4rem;font-weight:500}
 .modal-close{
   position:absolute;top:1.2rem;right:1.5rem;z-index:2;
   background:none;border:1px solid rgba(255,255,255,.2);color:rgba(255,255,255,.65);
@@ -837,7 +837,7 @@ footer{background:#ede9e2;border-top:1px solid var(--brd)}
 .modal-close:hover{background:rgba(255,255,255,.12);color:#fff;border-color:rgba(255,255,255,.5)}
 .modal-body{padding:2.5rem 3rem}
 .modal-stitle{
-  font-size:.68rem;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);
+  font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);
   margin-bottom:.85rem;display:-webkit-box;display:-ms-flexbox;display:flex;
   -webkit-box-align:center;-ms-flex-align:center;align-items:center;gap:.6rem;
 }
@@ -846,7 +846,7 @@ footer{background:#ede9e2;border-top:1px solid var(--brd)}
 .modal-ph{
   background:var(--bg);border:1px dashed rgba(138,109,27,.3);
   padding:2rem;text-align:center;color:var(--mut);
-  font-size:.95rem;font-weight:300;font-style:italic;line-height:1.7;
+  font-size:.95rem;font-weight:400;font-style:italic;line-height:1.7;
 }
 .modal-ph strong{color:var(--gold);font-style:normal;font-weight:500}
 @media(max-width:600px){
@@ -866,7 +866,7 @@ details summary::after{
   content:'+';
   position:absolute;right:0;top:50%;
   -webkit-transform:translateY(-50%);transform:translateY(-50%);
-  font-size:1.2rem;color:var(--gold);font-weight:300;
+  font-size:1.2rem;color:var(--gold);font-weight:400;
   -webkit-transition:-webkit-transform .3s;transition:transform .3s;
 }
 details[open] summary::after{content:'−'}
@@ -904,7 +904,7 @@ details[open] summary{color:var(--gold)}
 #cookie-banner.visible{-webkit-transform:translateY(0);transform:translateY(0)}
 #cookie-banner.hiding{-webkit-transform:translateY(100%);transform:translateY(100%)}
 .cookie-txt{-webkit-box-flex:1;-ms-flex:1;flex:1}
-.cookie-txt p{font-size:.875rem;font-weight:300;color:rgba(255,255,255,.75);line-height:1.65}
+.cookie-txt p{font-size:.875rem;font-weight:400;color:rgba(255,255,255,.75);line-height:1.65}
 .cookie-txt strong{color:rgba(255,255,255,.95);font-weight:500}
 .cookie-txt a{color:var(--gold-light);text-decoration:none;-webkit-transition:opacity .2s;transition:opacity .2s}
 .cookie-txt a:hover{opacity:.75;text-decoration:underline}
@@ -929,6 +929,58 @@ details[open] summary{color:var(--gold)}
   .cookie-actions{width:100%;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between}
   .cookie-accept,.cookie-decline{-webkit-box-flex:1;-ms-flex:1;flex:1;text-align:center}
 }
+
+/* ══════════════════════════════════════
+   TIPOGRAFIA, SPAZI E COLORE DEL TESTO
+   Regole: righe 45–75 caratteri, interlinea 1.6–1.7,
+   testo piccolo mai sotto 12px, prossimità (titolo vicino
+   al suo testo, lontano dal blocco precedente), ritmo
+   verticale con pochi valori ripetuti.
+   ══════════════════════════════════════ */
+:root{
+  --sec-y:clamp(4rem,7vw,6rem);   /* spazio verticale unico fra sezioni */
+  --head-gap:3rem;                /* distanza titolo di sezione → contenuto */
+  --measure:54ch;                 /* lunghezza massima riga di lettura */
+}
+body{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;text-rendering:optimizeLegibility}
+
+/* Lunghezza riga: niente paragrafi da 110+ caratteri */
+.hero-desc,.intestazione p,.testo-col p,.tlx,.ctab p,.cit p,
+section[aria-label] p,details p,.sec-form > p{max-width:var(--measure)}
+.hero-desc{max-width:48ch}
+.intestazione p{max-width:50ch}
+.testo-col p+p{margin-top:0}
+/* Etichette dentro le colonne di testo ereditavano grigio e 16px */
+.testo-col p.etichetta{font-size:.75rem;color:var(--gold);font-weight:500;line-height:1.6;margin-bottom:.75rem;max-width:none}
+
+/* Ritmo verticale: un solo valore per le sezioni */
+.sec-pillars,.sec-aree,.sec-tl,.sec-val,.sec-tmg,.sec-sett,.sec-2col,
+section[aria-label="Chi assistiamo"],section[aria-label="Domande frequenti"],
+section[aria-label="Note informative sui servizi"]{padding-top:var(--sec-y)!important;padding-bottom:var(--sec-y)!important}
+.sec-form{padding-top:var(--sec-y);padding-bottom:var(--sec-y)}
+.sec-tab{padding-bottom:var(--sec-y)}
+.ctab{padding-top:calc(var(--sec-y) * .8);padding-bottom:calc(var(--sec-y) * .8)}
+
+/* Prossimità: etichetta → titolo stretto, titolo → contenuto ampio */
+.etichetta,.hero-tag{margin-bottom:.75rem}
+.titolo{margin-bottom:1rem;line-height:1.15}
+.titolo + .linea-oro{margin-top:.25rem}
+.pg3,.ag4,.vg4,.tgg,.tl,.stg{margin-top:var(--head-gap)!important}
+section[aria-label="Domande frequenti"] > div,
+section[aria-label="Note informative sui servizi"] > div{margin-top:var(--head-gap)!important}
+.pi h3,.vc h3,.ac h4,.svc h4{line-height:1.3}
+.pi p,.vc p,.ac p{line-height:1.65}
+
+/* Testo piccolo: minimo 12px, spaziatura maiuscoletto moderata */
+.fs2,.logo-sub,.il,.trt,.cap label,.bio-hint,.tmc-bio .bio-hint,.modal-stitle,.fc2 h5{font-size:.75rem}
+.fs2,.il,.trt,.cap label,.bio-hint,.sl,.nl,.trl,.tla,.pil,cite,.cit cite{letter-spacing:.12em}
+.fc2 p,.fc2 li a,.fc2 li span,.fb2 span{font-size:.9rem}
+
+/* Colore: link nel testo riconoscibili anche senza il colore (WCAG 1.4.1) */
+.iv a,.fc2 p a,p a[href^="tel"],p a[href^="mailto"],details a{text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px;text-decoration-color:rgba(125,99,24,.45)}
+.iv a:hover,.fc2 p a:hover,p a[href^="tel"]:hover,details a:hover{text-decoration-color:currentColor}
+/* Il grigio del testo secondario resta unico: niente grigi più chiari */
+.tsp,.svc li,.ac p,.sl,.nl{color:var(--mut)}
 
 /* ══════════════════════════════════════
    MOBILE — adattamento a tutti i telefoni
@@ -979,7 +1031,7 @@ img,iframe,video{max-width:100%}
 
   /* Tab servizi: tutte visibili, vanno a capo */
   .tabn{flex-wrap:wrap!important;overflow:visible;gap:.5rem;margin-left:calc(-1 * var(--gx));margin-right:calc(-1 * var(--gx));padding:1.25rem var(--gx);border-bottom:none;background:transparent}
-  .tabb{border:1px solid var(--brd);margin:0;padding:.7rem .9rem;font-size:.72rem;white-space:normal;text-align:center;background:var(--w);min-height:44px}
+  .tabb{border:1px solid var(--brd);margin:0;padding:.7rem .9rem;font-size:.75rem;white-space:normal;text-align:center;background:var(--w);min-height:44px}
   .tabb[aria-selected="true"]{background:var(--gold);border-color:var(--gold);color:#fff}
 
   .ctab{padding:3.5rem var(--gx)}
@@ -992,12 +1044,12 @@ img,iframe,video{max-width:100%}
   :root{--gx:1.25rem}
   .hero{padding-top:calc(var(--nav-h) + 2rem);gap:2rem}
   .hero-sx h1{font-size:clamp(2.3rem,11vw,3.2rem)}
-  .hero-desc{font-size:.98rem;line-height:1.75}
+  .hero-desc{font-size:.98rem;line-height:1.7}
   .hero-btn{flex-direction:column;align-items:stretch}
   .hero-btn a{text-align:center}
   .intestazione h1{font-size:clamp(2rem,9.5vw,2.8rem)}
   .titolo{font-size:clamp(1.6rem,7.5vw,2.2rem)}
-  .etichetta,.hero-tag{letter-spacing:.2em;font-size:.7rem}
+  .etichetta,.hero-tag{letter-spacing:.16em;font-size:.75rem}
   .sn,.nn{font-size:2.1rem}
   .sb,.nb{padding:1.4rem .8rem}
   .sl,.nl{font-size:.68rem;letter-spacing:.08em}
@@ -1161,13 +1213,13 @@ img,iframe,video{max-width:100%}
       <p class="etichetta">Clienti Aziendali</p>
       <h2 class="titolo" style="font-size:clamp(1.4rem,2.5vw,2rem)">Consulenza per <em>imprese e professionisti.</em></h2>
       <div class="linea-oro"></div>
-      <p style="font-size:.95rem;font-weight:300;line-height:1.85;color:var(--mut)">Lo studio offre consulenza fiscale internazionale per PMI romane con operazioni estere, assistenza nelle fusioni e scissioni per gruppi familiari e holding, revisione legale per banche cooperative (BCC) e enti pubblici. Supportiamo startup innovative nella pianificazione fiscale iniziale e nella ricerca di agevolazioni. La gestione della crisi d'impresa a Roma è seguita da professionisti iscritti all'Albo dei Curatori Fallimentari.</p>
+      <p style="font-size:.95rem;font-weight:400;line-height:1.7;color:var(--mut)">Lo studio offre consulenza fiscale internazionale per PMI romane con operazioni estere, assistenza nelle fusioni e scissioni per gruppi familiari e holding, revisione legale per banche cooperative (BCC) e enti pubblici. Supportiamo startup innovative nella pianificazione fiscale iniziale e nella ricerca di agevolazioni. La gestione della crisi d'impresa a Roma è seguita da professionisti iscritti all'Albo dei Curatori Fallimentari.</p>
     </div>
     <div>
       <p class="etichetta">Clienti Privati</p>
       <h2 class="titolo" style="font-size:clamp(1.4rem,2.5vw,2rem)">Consulenza per <em>privati e famiglie.</em></h2>
       <div class="linea-oro"></div>
-      <p style="font-size:.95rem;font-weight:300;line-height:1.85;color:var(--mut)">Assistiamo privati e famiglie a Roma nella dichiarazione dei redditi, nell'apertura della partita IVA, nelle successioni e donazioni, nella protezione del patrimonio tramite Trust familiare e nella pianificazione del passaggio generazionale. I liberi professionisti trovano nel nostro studio un partner fiscale di lungo periodo, con consulenza personalizzata per ogni regime tributario.</p>
+      <p style="font-size:.95rem;font-weight:400;line-height:1.7;color:var(--mut)">Assistiamo privati e famiglie a Roma nella dichiarazione dei redditi, nell'apertura della partita IVA, nelle successioni e donazioni, nella protezione del patrimonio tramite Trust familiare e nella pianificazione del passaggio generazionale. I liberi professionisti trovano nel nostro studio un partner fiscale di lungo periodo, con consulenza personalizzata per ogni regime tributario.</p>
     </div>
   </div>
 </section>
@@ -1179,19 +1231,19 @@ img,iframe,video{max-width:100%}
   <div style="max-width:860px;margin-top:2rem">
     <details style="border-bottom:1px solid var(--brd);padding:1.2rem 0">
       <summary style="font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:600;cursor:pointer;color:var(--txt);list-style:none">Cos'è il Trust e quando conviene costituirlo?</summary>
-      <p style="font-size:.95rem;font-weight:300;line-height:1.85;color:var(--mut);margin-top:.8rem">Il Trust è uno strumento giuridico di tutela patrimoniale che consente di segregare beni per proteggere il patrimonio familiare o aziendale, riconosciuto in Italia ai sensi della Convenzione dell'Aja (L. 364/1989). È conveniente per la protezione del patrimonio da rischi imprenditoriali, il passaggio generazionale dell'impresa, la tutela di soggetti vulnerabili (disabili, minori) e la pianificazione successoria. Lo studio Nicola Di Foggia &amp; Partners assiste nella costituzione di trust nazionali ed esteri.</p>
+      <p style="font-size:.95rem;font-weight:400;line-height:1.7;color:var(--mut);margin-top:.8rem">Il Trust è uno strumento giuridico di tutela patrimoniale che consente di segregare beni per proteggere il patrimonio familiare o aziendale, riconosciuto in Italia ai sensi della Convenzione dell'Aja (L. 364/1989). È conveniente per la protezione del patrimonio da rischi imprenditoriali, il passaggio generazionale dell'impresa, la tutela di soggetti vulnerabili (disabili, minori) e la pianificazione successoria. Lo studio Nicola Di Foggia &amp; Partners assiste nella costituzione di trust nazionali ed esteri.</p>
     </details>
     <details style="border-bottom:1px solid var(--brd);padding:1.2rem 0">
       <summary style="font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:600;cursor:pointer;color:var(--txt);list-style:none">Cosa fare in caso di crisi d'impresa a Roma?</summary>
-      <p style="font-size:.95rem;font-weight:300;line-height:1.85;color:var(--mut);margin-top:.8rem">Il Codice della Crisi d'Impresa (D.Lgs. 14/2019) prevede strumenti come la composizione negoziata della crisi (art. 12 CCII), il concordato preventivo, i piani di ristrutturazione omologati e gli accordi di ristrutturazione del debito (art. 57 CCII). Lo studio Nicola Di Foggia &amp; Partners, iscritto all'Albo dei Curatori Fallimentari, assiste le imprese in tutte le fasi del risanamento.</p>
+      <p style="font-size:.95rem;font-weight:400;line-height:1.7;color:var(--mut);margin-top:.8rem">Il Codice della Crisi d'Impresa (D.Lgs. 14/2019) prevede strumenti come la composizione negoziata della crisi (art. 12 CCII), il concordato preventivo, i piani di ristrutturazione omologati e gli accordi di ristrutturazione del debito (art. 57 CCII). Lo studio Nicola Di Foggia &amp; Partners, iscritto all'Albo dei Curatori Fallimentari, assiste le imprese in tutte le fasi del risanamento.</p>
     </details>
     <details style="border-bottom:1px solid var(--brd);padding:1.2rem 0">
       <summary style="font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:600;cursor:pointer;color:var(--txt);list-style:none">Come aprire una partita IVA a Roma?</summary>
-      <p style="font-size:.95rem;font-weight:300;line-height:1.85;color:var(--mut);margin-top:.8rem">Per aprire una partita IVA a Roma è necessario scegliere il codice ATECO, il regime fiscale (regime forfettario ex L. 190/2014 o regime ordinario) e la forma giuridica. Lo studio Nicola Di Foggia &amp; Partners assiste liberi professionisti e imprenditori nella scelta del regime fiscale ottimale, nell'apertura della partita IVA e nella pianificazione tributaria iniziale.</p>
+      <p style="font-size:.95rem;font-weight:400;line-height:1.7;color:var(--mut);margin-top:.8rem">Per aprire una partita IVA a Roma è necessario scegliere il codice ATECO, il regime fiscale (regime forfettario ex L. 190/2014 o regime ordinario) e la forma giuridica. Lo studio Nicola Di Foggia &amp; Partners assiste liberi professionisti e imprenditori nella scelta del regime fiscale ottimale, nell'apertura della partita IVA e nella pianificazione tributaria iniziale.</p>
     </details>
     <details style="border-bottom:1px solid var(--brd);padding:1.2rem 0">
       <summary style="font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:600;cursor:pointer;color:var(--txt);list-style:none">Dove si trova lo studio commercialista a Roma?</summary>
-      <p style="font-size:.95rem;font-weight:300;line-height:1.85;color:var(--mut);margin-top:.8rem">Lo studio Nicola Di Foggia &amp; Partners si trova in <strong>Viale di Villa Massimo 37, 00161 Roma</strong>, quartiere Trieste. Raggiungibile con metro Linea B fermata Bologna, bus linee 310, 360, 86. Tel: <a href="tel:+390644241565" style="color:var(--gold);text-decoration:none;font-weight:500">+39 06 442 415 65</a>. Orari: lunedì–venerdì 9:00–18:00.</p>
+      <p style="font-size:.95rem;font-weight:400;line-height:1.7;color:var(--mut);margin-top:.8rem">Lo studio Nicola Di Foggia &amp; Partners si trova in <strong>Viale di Villa Massimo 37, 00161 Roma</strong>, quartiere Trieste. Raggiungibile con metro Linea B fermata Bologna, bus linee 310, 360, 86. Tel: <a href="tel:+390644241565" style="color:var(--gold);text-decoration:none;font-weight:500">+39 06 442 415 65</a>. Orari: lunedì–venerdì 9:00–18:00.</p>
     </details>
   </div>
 </section>
@@ -1253,27 +1305,27 @@ img,iframe,video{max-width:100%}
   <div style="max-width:900px;margin-top:2rem;display:grid;grid-template-columns:1fr 1fr;gap:2rem">
     <div style="padding:1.5rem;background:var(--w);border:1px solid var(--brd)">
       <h3 style="font-family:'Playfair Display',serif;font-size:1rem;font-weight:600;margin-bottom:.6rem;color:var(--txt)">Contenzioso Tributario</h3>
-      <p style="font-size:.875rem;font-weight:300;line-height:1.8;color:var(--mut)">Il contenzioso tributario &egrave; la procedura mediante la quale il contribuente si oppone agli atti impositivi dell&rsquo;Amministrazione finanziaria davanti alle Corti di Giustizia Tributaria, ai sensi del D.Lgs. 546/1992. Comprende ricorsi, mediazioni fiscali obbligatorie (art. 17-bis D.Lgs. 546/1992), appelli e procedimenti in Cassazione.</p>
+      <p style="font-size:.875rem;font-weight:400;line-height:1.7;color:var(--mut)">Il contenzioso tributario &egrave; la procedura mediante la quale il contribuente si oppone agli atti impositivi dell&rsquo;Amministrazione finanziaria davanti alle Corti di Giustizia Tributaria, ai sensi del D.Lgs. 546/1992. Comprende ricorsi, mediazioni fiscali obbligatorie (art. 17-bis D.Lgs. 546/1992), appelli e procedimenti in Cassazione.</p>
     </div>
     <div style="padding:1.5rem;background:var(--w);border:1px solid var(--brd)">
       <h3 style="font-family:'Playfair Display',serif;font-size:1rem;font-weight:600;margin-bottom:.6rem;color:var(--txt)">Trust e Tutela Patrimoniale</h3>
-      <p style="font-size:.875rem;font-weight:300;line-height:1.8;color:var(--mut)">Il Trust &egrave; uno strumento giuridico di segregazione patrimoniale riconosciuto in Italia ai sensi della Convenzione dell&rsquo;Aja del 1&deg; luglio 1985 (ratificata con L. 364/1989). Consente la separazione dei beni dal patrimonio del disponente e la loro destinazione a beneficiari specifici, con ampia flessibilit&agrave; gestionale per il trustee.</p>
+      <p style="font-size:.875rem;font-weight:400;line-height:1.7;color:var(--mut)">Il Trust &egrave; uno strumento giuridico di segregazione patrimoniale riconosciuto in Italia ai sensi della Convenzione dell&rsquo;Aja del 1&deg; luglio 1985 (ratificata con L. 364/1989). Consente la separazione dei beni dal patrimonio del disponente e la loro destinazione a beneficiari specifici, con ampia flessibilit&agrave; gestionale per il trustee.</p>
     </div>
     <div style="padding:1.5rem;background:var(--w);border:1px solid var(--brd)">
       <h3 style="font-family:'Playfair Display',serif;font-size:1rem;font-weight:600;margin-bottom:.6rem;color:var(--txt)">Crisi d&rsquo;Impresa</h3>
-      <p style="font-size:.875rem;font-weight:300;line-height:1.8;color:var(--mut)">Il Codice della Crisi d&rsquo;Impresa e dell&rsquo;Insolvenza (D.Lgs. 14/2019, modificato dal D.Lgs. 83/2022 in recepimento della Direttiva UE 2019/1023) introduce strumenti di allerta precoce e risanamento: composizione negoziata della crisi (art. 12 CCII), piani di ristrutturazione omologati (PRO, art. 64-bis CCII), concordato preventivo e accordi di ristrutturazione del debito (art. 57 CCII).</p>
+      <p style="font-size:.875rem;font-weight:400;line-height:1.7;color:var(--mut)">Il Codice della Crisi d&rsquo;Impresa e dell&rsquo;Insolvenza (D.Lgs. 14/2019, modificato dal D.Lgs. 83/2022 in recepimento della Direttiva UE 2019/1023) introduce strumenti di allerta precoce e risanamento: composizione negoziata della crisi (art. 12 CCII), piani di ristrutturazione omologati (PRO, art. 64-bis CCII), concordato preventivo e accordi di ristrutturazione del debito (art. 57 CCII).</p>
     </div>
     <div style="padding:1.5rem;background:var(--w);border:1px solid var(--brd)">
       <h3 style="font-family:'Playfair Display',serif;font-size:1rem;font-weight:600;margin-bottom:.6rem;color:var(--txt)">Operazioni Straordinarie</h3>
-      <p style="font-size:.875rem;font-weight:300;line-height:1.8;color:var(--mut)">Le operazioni straordinarie societarie modificano strutturalmente la compagine o il patrimonio aziendale: la fusione (art. 2501 c.c.) unisce due o pi&ugrave; societ&agrave;; la scissione (art. 2506 c.c.) separa rami d&rsquo;azienda; il conferimento (art. 2343 c.c.) trasferisce beni o aziende a un&rsquo;altra societ&agrave; in cambio di partecipazioni. Ogni operazione ha specifica rilevanza fiscale ai sensi del TUIR (D.P.R. 917/1986).</p>
+      <p style="font-size:.875rem;font-weight:400;line-height:1.7;color:var(--mut)">Le operazioni straordinarie societarie modificano strutturalmente la compagine o il patrimonio aziendale: la fusione (art. 2501 c.c.) unisce due o pi&ugrave; societ&agrave;; la scissione (art. 2506 c.c.) separa rami d&rsquo;azienda; il conferimento (art. 2343 c.c.) trasferisce beni o aziende a un&rsquo;altra societ&agrave; in cambio di partecipazioni. Ogni operazione ha specifica rilevanza fiscale ai sensi del TUIR (D.P.R. 917/1986).</p>
     </div>
     <div style="padding:1.5rem;background:var(--w);border:1px solid var(--brd)">
       <h3 style="font-family:'Playfair Display',serif;font-size:1rem;font-weight:600;margin-bottom:.6rem;color:var(--txt)">Revisione Legale</h3>
-      <p style="font-size:.875rem;font-weight:300;line-height:1.8;color:var(--mut)">La revisione legale dei conti &egrave; disciplinata dal D.Lgs. 39/2010 (recepimento Direttiva 2006/43/CE). &Egrave; obbligatoria per le societ&agrave; che superano i limiti dimensionali ex art. 2477 c.c. e per le societ&agrave; quotate. I revisori di Nicola Di Foggia &amp; Partners sono iscritti al Registro dei Revisori Legali tenuto dal MEF.</p>
+      <p style="font-size:.875rem;font-weight:400;line-height:1.7;color:var(--mut)">La revisione legale dei conti &egrave; disciplinata dal D.Lgs. 39/2010 (recepimento Direttiva 2006/43/CE). &Egrave; obbligatoria per le societ&agrave; che superano i limiti dimensionali ex art. 2477 c.c. e per le societ&agrave; quotate. I revisori di Nicola Di Foggia &amp; Partners sono iscritti al Registro dei Revisori Legali tenuto dal MEF.</p>
     </div>
     <div style="padding:1.5rem;background:var(--w);border:1px solid var(--brd)">
       <h3 style="font-family:'Playfair Display',serif;font-size:1rem;font-weight:600;margin-bottom:.6rem;color:var(--txt)">Passaggio Generazionale</h3>
-      <p style="font-size:.875rem;font-weight:300;line-height:1.8;color:var(--mut)">Il passaggio generazionale d&rsquo;impresa &egrave; il processo mediante il quale l&rsquo;imprenditore trasferisce la propriet&agrave; e/o la gestione dell&rsquo;azienda ai successori, minimizzando il carico fiscale e garantendo la continuit&agrave; aziendale. Gli strumenti giuridici includono il patto di famiglia (art. 768-bis c.c.), la holding di famiglia, il Trust e la donazione d&rsquo;azienda con agevolazione ex art. 3 co. 4-ter D.Lgs. 346/1990.</p>
+      <p style="font-size:.875rem;font-weight:400;line-height:1.7;color:var(--mut)">Il passaggio generazionale d&rsquo;impresa &egrave; il processo mediante il quale l&rsquo;imprenditore trasferisce la propriet&agrave; e/o la gestione dell&rsquo;azienda ai successori, minimizzando il carico fiscale e garantendo la continuit&agrave; aziendale. Gli strumenti giuridici includono il patto di famiglia (art. 768-bis c.c.), la holding di famiglia, il Trust e la donazione d&rsquo;azienda con agevolazione ex art. 3 co. 4-ter D.Lgs. 346/1990.</p>
     </div>
   </div>
 </section>
@@ -1329,24 +1381,24 @@ img,iframe,video{max-width:100%}
   </div>
 
   <div id="sv-fiscale" class="tabc" role="tabpanel" aria-labelledby="tab-fiscale" aria-hidden="false" tabindex="0" data-last-updated="2025-06">
-    <div class="svc"><h4>Contenzioso Tributario</h4><p style="font-size:.85rem;font-weight:300;color:var(--mut);margin-bottom:.8rem;line-height:1.6">Il contenzioso tributario è la procedura mediante la quale il contribuente si oppone agli atti dell'Amministrazione finanziaria davanti alle Corti di Giustizia Tributaria, ai sensi del D.Lgs. 546/1992. Lo studio assiste PMI e privati nelle fasi di verifica, contraddittorio e ricorso.</p><ul><li>Accertamenti con adesione</li><li>Memorie, ricorsi, mediazioni e appelli</li><li>Procedimenti in Corte di Cassazione</li><li>Rappresentanza nelle verifiche fiscali</li><li>Assistenza presso gli Uffici Finanziari</li><li>Rappresentanza nelle Commissioni Tributarie</li></ul></div>
-    <div class="svc"><h4>Consulenza Tributaria</h4><p style="font-size:.85rem;font-weight:300;color:var(--mut);margin-bottom:.8rem;line-height:1.6">La consulenza fiscale per PMI e privati a Roma comprende la pianificazione tributaria nazionale e internazionale, la gestione delle dichiarazioni dei redditi, le successioni e donazioni e la consulenza per liberi professionisti e imprenditori.</p><ul><li>Dichiarazioni fiscali</li><li>Imposte dirette e indirette</li><li>Pianificazione fiscale nazionale</li><li>Pianificazione fiscale internazionale</li><li>Redazione di pareri</li><li>Successioni e donazioni</li><li>Reti d'imprese</li></ul></div>
+    <div class="svc"><h4>Contenzioso Tributario</h4><p style="font-size:.85rem;font-weight:400;color:var(--mut);margin-bottom:.8rem;line-height:1.6">Il contenzioso tributario è la procedura mediante la quale il contribuente si oppone agli atti dell'Amministrazione finanziaria davanti alle Corti di Giustizia Tributaria, ai sensi del D.Lgs. 546/1992. Lo studio assiste PMI e privati nelle fasi di verifica, contraddittorio e ricorso.</p><ul><li>Accertamenti con adesione</li><li>Memorie, ricorsi, mediazioni e appelli</li><li>Procedimenti in Corte di Cassazione</li><li>Rappresentanza nelle verifiche fiscali</li><li>Assistenza presso gli Uffici Finanziari</li><li>Rappresentanza nelle Commissioni Tributarie</li></ul></div>
+    <div class="svc"><h4>Consulenza Tributaria</h4><p style="font-size:.85rem;font-weight:400;color:var(--mut);margin-bottom:.8rem;line-height:1.6">La consulenza fiscale per PMI e privati a Roma comprende la pianificazione tributaria nazionale e internazionale, la gestione delle dichiarazioni dei redditi, le successioni e donazioni e la consulenza per liberi professionisti e imprenditori.</p><ul><li>Dichiarazioni fiscali</li><li>Imposte dirette e indirette</li><li>Pianificazione fiscale nazionale</li><li>Pianificazione fiscale internazionale</li><li>Redazione di pareri</li><li>Successioni e donazioni</li><li>Reti d'imprese</li></ul></div>
     <div class="svc"><h4>Contrattualistica</h4><ul><li>Affiancamento nelle trattative</li><li>Assistenza nella stipula di contratti</li><li>Elaborazione e revisione contratti</li><li>Contenzioso giusvaloristico</li></ul></div>
   </div>
   <div id="sv-societario" class="tabc" role="tabpanel" aria-labelledby="tab-societario" aria-hidden="true" tabindex="0" data-last-updated="2025-06">
-    <div class="svc"><h4>Consulenza Societaria</h4><p style="font-size:.85rem;font-weight:300;color:var(--mut);margin-bottom:.8rem;line-height:1.6">La consulenza societaria per PMI, multinazionali e holding di famiglia a Roma comprende la corporate governance, la scelta della forma giuridica ottimale e la gestione delle assemblee societarie.</p><ul><li>Analisi di bilancio</li><li>Scelta forma giuridica societaria</li><li>Redazione statuti personalizzati</li><li>Costituzione societaria</li><li>Rappresentanze in assemblee</li><li>Corporate governance</li></ul></div>
-    <div class="svc"><h4>Operazioni Straordinarie</h4><p style="font-size:.85rem;font-weight:300;color:var(--mut);margin-bottom:.8rem;line-height:1.6">Le operazioni straordinarie — fusioni (art. 2501 c.c.), scissioni (art. 2506 c.c.), trasformazioni e conferimenti d'azienda — richiedono assistenza specializzata per massimizzare i benefici fiscali e societari. Lo studio assiste PMI e gruppi familiari in queste operazioni a Roma e in tutta Italia.</p><ul><li>Fusioni e incorporazioni</li><li>Trasformazioni e scissioni</li><li>Conferimenti di aziende o rami</li><li>Liquidazioni</li><li>Procedure concorsuali ed arbitrati</li><li>Turnaround e risanamento</li></ul></div>
+    <div class="svc"><h4>Consulenza Societaria</h4><p style="font-size:.85rem;font-weight:400;color:var(--mut);margin-bottom:.8rem;line-height:1.6">La consulenza societaria per PMI, multinazionali e holding di famiglia a Roma comprende la corporate governance, la scelta della forma giuridica ottimale e la gestione delle assemblee societarie.</p><ul><li>Analisi di bilancio</li><li>Scelta forma giuridica societaria</li><li>Redazione statuti personalizzati</li><li>Costituzione societaria</li><li>Rappresentanze in assemblee</li><li>Corporate governance</li></ul></div>
+    <div class="svc"><h4>Operazioni Straordinarie</h4><p style="font-size:.85rem;font-weight:400;color:var(--mut);margin-bottom:.8rem;line-height:1.6">Le operazioni straordinarie — fusioni (art. 2501 c.c.), scissioni (art. 2506 c.c.), trasformazioni e conferimenti d'azienda — richiedono assistenza specializzata per massimizzare i benefici fiscali e societari. Lo studio assiste PMI e gruppi familiari in queste operazioni a Roma e in tutta Italia.</p><ul><li>Fusioni e incorporazioni</li><li>Trasformazioni e scissioni</li><li>Conferimenti di aziende o rami</li><li>Liquidazioni</li><li>Procedure concorsuali ed arbitrati</li><li>Turnaround e risanamento</li></ul></div>
     <div class="svc"><h4>Pianificazione e Controllo</h4><ul><li>Business plan e piani industriali</li><li>Controllo di gestione</li><li>Valutazioni d'azienda</li><li>Valutazione del capitale economico</li><li>Piani di incentivi per il personale</li><li>Revisione legale</li></ul></div>
   </div>
   <div id="sv-patrimonio" class="tabc" role="tabpanel" aria-labelledby="tab-patrimonio" aria-hidden="true" tabindex="0" data-last-updated="2025-06">
-    <div class="svc"><h4>Tutela del Patrimonio</h4><p style="font-size:.85rem;font-weight:300;color:var(--mut);margin-bottom:.8rem;line-height:1.6">La tutela patrimoniale per famiglie e imprenditori a Roma utilizza strumenti come la holding di famiglia, il fondo patrimoniale, i patti di famiglia (art. 768-bis c.c.) e gli atti di destinazione (art. 2645-ter c.c.) per proteggere il patrimonio da rischi imprenditoriali e pianificare il passaggio generazionale.</p><ul><li>Intestazioni fiduciarie</li><li>Polizze assicurative</li><li>Patti di famiglia</li><li>Impresa familiare</li><li>Atti di destinazione</li><li>Fondo patrimoniale</li><li>Holding di famiglia</li></ul></div>
-    <div class="svc"><h4>Trust</h4><p style="font-size:.85rem;font-weight:300;color:var(--mut);margin-bottom:.8rem;line-height:1.6">Il Trust è uno strumento giuridico di segregazione patrimoniale riconosciuto in Italia ai sensi della Convenzione dell'Aja (L. 364/1989). È utilizzato da famiglie e imprenditori per proteggere il patrimonio, garantire il passaggio generazionale e tutelare soggetti vulnerabili. Lo studio assiste nella costituzione di trust nazionali ed esteri con funzioni di trustee e protector.</p><ul><li>Trust nazionali ed esteri</li><li>Costituzione Trust Company</li><li>Funzione di trustee</li><li>Funzioni di protector</li><li>Impostazione tecnico giuridica Trust</li></ul></div>
-    <div class="svc"><h4>Successioni e Passaggio Generazionale</h4><p style="font-size:.85rem;font-weight:300;color:var(--mut);margin-bottom:.8rem;line-height:1.6">Il passaggio generazionale dell'impresa a Roma richiede una pianificazione strategica che integri aspetti fiscali, civilistici e organizzativi. Lo studio assiste le famiglie imprenditoriali nella trasmissione del patrimonio e nella continuità aziendale.</p><ul><li>Pianificazione successoria</li><li>Passaggio generazionale dell'impresa</li><li>Preparazione manageriale</li><li>Gestione patrimoni immobiliari</li><li>Gestioni fiduciarie statiche</li></ul></div>
+    <div class="svc"><h4>Tutela del Patrimonio</h4><p style="font-size:.85rem;font-weight:400;color:var(--mut);margin-bottom:.8rem;line-height:1.6">La tutela patrimoniale per famiglie e imprenditori a Roma utilizza strumenti come la holding di famiglia, il fondo patrimoniale, i patti di famiglia (art. 768-bis c.c.) e gli atti di destinazione (art. 2645-ter c.c.) per proteggere il patrimonio da rischi imprenditoriali e pianificare il passaggio generazionale.</p><ul><li>Intestazioni fiduciarie</li><li>Polizze assicurative</li><li>Patti di famiglia</li><li>Impresa familiare</li><li>Atti di destinazione</li><li>Fondo patrimoniale</li><li>Holding di famiglia</li></ul></div>
+    <div class="svc"><h4>Trust</h4><p style="font-size:.85rem;font-weight:400;color:var(--mut);margin-bottom:.8rem;line-height:1.6">Il Trust è uno strumento giuridico di segregazione patrimoniale riconosciuto in Italia ai sensi della Convenzione dell'Aja (L. 364/1989). È utilizzato da famiglie e imprenditori per proteggere il patrimonio, garantire il passaggio generazionale e tutelare soggetti vulnerabili. Lo studio assiste nella costituzione di trust nazionali ed esteri con funzioni di trustee e protector.</p><ul><li>Trust nazionali ed esteri</li><li>Costituzione Trust Company</li><li>Funzione di trustee</li><li>Funzioni di protector</li><li>Impostazione tecnico giuridica Trust</li></ul></div>
+    <div class="svc"><h4>Successioni e Passaggio Generazionale</h4><p style="font-size:.85rem;font-weight:400;color:var(--mut);margin-bottom:.8rem;line-height:1.6">Il passaggio generazionale dell'impresa a Roma richiede una pianificazione strategica che integri aspetti fiscali, civilistici e organizzativi. Lo studio assiste le famiglie imprenditoriali nella trasmissione del patrimonio e nella continuità aziendale.</p><ul><li>Pianificazione successoria</li><li>Passaggio generazionale dell'impresa</li><li>Preparazione manageriale</li><li>Gestione patrimoni immobiliari</li><li>Gestioni fiduciarie statiche</li></ul></div>
   </div>
   <div id="sv-crisi" class="tabc" role="tabpanel" aria-labelledby="tab-crisi" aria-hidden="true" tabindex="0" data-last-updated="2025-06">
-    <div class="svc"><h4>Gestione della Crisi d'Impresa</h4><p style="font-size:.85rem;font-weight:300;color:var(--mut);margin-bottom:.8rem;line-height:1.6">Il Codice della Crisi d'Impresa e dell'Insolvenza (D.Lgs. 14/2019, riformato dal D.Lgs. 83/2022) offre alle imprese in difficoltà strumenti per il risanamento precoce. Lo studio, iscritto all'Albo dei Curatori Fallimentari, assiste imprese di ogni dimensione nella gestione della crisi a Roma e in tutta Italia.</p><ul><li>Piani di ristrutturazione del debito</li><li>Concordati stragiudiziali e preventivi</li><li>Piani attestati di risanamento</li><li>Composizione negoziata della crisi</li><li>Concordato semplificato per la liquidazione</li><li>Accordi di ristrutturazione del debito</li></ul></div>
+    <div class="svc"><h4>Gestione della Crisi d'Impresa</h4><p style="font-size:.85rem;font-weight:400;color:var(--mut);margin-bottom:.8rem;line-height:1.6">Il Codice della Crisi d'Impresa e dell'Insolvenza (D.Lgs. 14/2019, riformato dal D.Lgs. 83/2022) offre alle imprese in difficoltà strumenti per il risanamento precoce. Lo studio, iscritto all'Albo dei Curatori Fallimentari, assiste imprese di ogni dimensione nella gestione della crisi a Roma e in tutta Italia.</p><ul><li>Piani di ristrutturazione del debito</li><li>Concordati stragiudiziali e preventivi</li><li>Piani attestati di risanamento</li><li>Composizione negoziata della crisi</li><li>Concordato semplificato per la liquidazione</li><li>Accordi di ristrutturazione del debito</li></ul></div>
     <div class="svc"><h4>Strumenti di Risanamento</h4><ul><li>Transazione fiscale</li><li>Turnaround management</li><li>Finanza d'azienda</li></ul></div>
-    <div class="svc"><h4>Start-up d'Impresa</h4><p style="font-size:.85rem;font-weight:300;color:var(--mut);margin-bottom:.8rem;line-height:1.6">Assistenza completa per la costituzione di start-up e start-up innovative a Roma ai sensi del D.L. 179/2012. Dalla scelta della forma societaria al business plan, fino all'accesso alle agevolazioni fiscali per le imprese innovative.</p><ul><li>Scelta forma societaria</li><li>Start-up e start-up innovative</li><li>Fabbisogno finanziario</li><li>Statuti personalizzati</li><li>Business plan e piani industriali</li></ul></div>
+    <div class="svc"><h4>Start-up d'Impresa</h4><p style="font-size:.85rem;font-weight:400;color:var(--mut);margin-bottom:.8rem;line-height:1.6">Assistenza completa per la costituzione di start-up e start-up innovative a Roma ai sensi del D.L. 179/2012. Dalla scelta della forma societaria al business plan, fino all'accesso alle agevolazioni fiscali per le imprese innovative.</p><ul><li>Scelta forma societaria</li><li>Start-up e start-up innovative</li><li>Fabbisogno finanziario</li><li>Statuti personalizzati</li><li>Business plan e piani industriali</li></ul></div>
   </div>
   <div id="sv-enti" class="tabc" role="tabpanel" aria-labelledby="tab-enti" aria-hidden="true" tabindex="0" data-last-updated="2025-06">
     <div class="svc"><h4>Enti del Terzo Settore</h4><ul><li>Associazioni culturali</li><li>Associazioni di promozione sociale</li><li>Societ&agrave; sportive dilettantistiche</li><li>Enti del Terzo Settore e Onlus</li><li>Ordini religiosi</li><li>Consorzi</li></ul></div>
@@ -1463,7 +1515,7 @@ img,iframe,video{max-width:100%}
 <div class="sec-form">
   <p class="etichetta cc-reveal cc-fade-up" aria-hidden="true">Scrivici</p>
   <h2 class="titolo cc-reveal cc-fade-up cc-delay-2">Inviaci un <em>messaggio.</em></h2>
-  <p class="cc-reveal cc-fade-up cc-delay-3" style="font-size:1rem;font-weight:300;color:var(--mut);margin-bottom:2rem;max-width:600px">Compila il modulo e ti risponderemo entro 24 ore lavorative. Per urgenze chiama al <a href="tel:+390644241565" style="color:var(--gold);text-decoration:none;font-weight:500">+39 06 442 415 65</a>.</p>
+  <p class="cc-reveal cc-fade-up cc-delay-3" style="font-size:1rem;font-weight:400;color:var(--mut);margin-bottom:2rem;max-width:600px">Compila il modulo e ti risponderemo entro 24 ore lavorative. Per urgenze chiama al <a href="tel:+390644241565" style="color:var(--gold);text-decoration:none;font-weight:500">+39 06 442 415 65</a>.</p>
   <div class="fgri cc-reveal cc-fade-up cc-delay-4" role="form" aria-label="Modulo di contatto">
     <div class="frig">
       <div class="cap"><label for="f-nome">Nome</label><input type="text" id="f-nome" name="nome" autocomplete="given-name" required/></div>

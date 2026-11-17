@@ -931,6 +931,120 @@ details[open] summary{color:var(--gold)}
 }
 
 /* ══════════════════════════════════════
+   MOBILE — adattamento a tutti i telefoni
+   (blocco finale: prevale sulle regole "luxury" precedenti)
+   ══════════════════════════════════════ */
+:root{--nav-h:68px;--gx:1.5rem}
+html,body{overflow-x:hidden}
+@supports (overflow-x:clip){html,body{overflow-x:clip}}
+html{scroll-padding-top:var(--nav-h);-webkit-text-size-adjust:100%;text-size-adjust:100%}
+img,iframe,video{max-width:100%}
+.pt{padding-top:var(--nav-h)}
+.nav-links .nav-mobile-only{display:none}
+.hamburger span,.hamburger span::before,.hamburger span::after{transition:transform .25s,top .25s,background .2s}
+.hamburger[aria-expanded="true"] span{background:transparent}
+.hamburger[aria-expanded="true"] span::before{top:0;transform:rotate(45deg)}
+.hamburger[aria-expanded="true"] span::after{top:0;transform:rotate(-45deg)}
+
+@media(max-width:1060px){
+  nav{padding:.75rem var(--gx);padding-left:max(var(--gx),env(safe-area-inset-left));padding-right:max(var(--gx),env(safe-area-inset-right))}
+  .hamburger{width:44px;height:44px}
+  .nav-links{max-height:calc(100vh - var(--nav-h));max-height:calc(100dvh - var(--nav-h));overflow-y:auto;box-shadow:0 12px 24px rgba(0,0,0,.06)}
+  .nav-links a{padding:.95rem var(--gx);font-size:.85rem}
+  .nav-links a::after{display:none}
+  .nav-links .nav-mobile-only{display:block;border-top:1px solid var(--brd);margin-top:.5rem;padding-top:.5rem}
+  .nav-links .nav-mobile-only a{color:var(--gold);font-weight:500}
+
+  /* Hero: non finisce sotto la navbar */
+  .hero{padding:calc(var(--nav-h) + 2.5rem) var(--gx) 3rem}
+  .hero-dx{display:block}
+  .qlf{display:block}
+
+  /* Le regole "luxury" sovrascrivevano il padding mobile */
+  .intestazione{padding:3rem var(--gx) 2.5rem}
+  .sec-2col{padding:3.5rem var(--gx);gap:2.5rem}
+  .sec-pillars,.sec-aree,.sec-tl,.sec-val,.sec-tmg,.sec-sett{padding:3.5rem var(--gx)}
+  .sec-form{padding:3rem var(--gx) 4rem}
+  .sec-tab{padding:0 var(--gx) 4rem}
+  section[aria-label="Chi assistiamo"],
+  section[aria-label="Domande frequenti"],
+  section[aria-label="Note informative sui servizi"]{padding:3.5rem var(--gx)!important}
+  section[aria-label="Chi assistiamo"] > div{gap:2.5rem!important}
+
+  /* Team: 2 colonne, l'ultima card dispari occupa la riga intera */
+  .tgg{grid-template-columns:1fr 1fr!important}
+  .tgg > :last-child:nth-child(odd){grid-column:1/-1}
+  .pg3 > :last-child:nth-child(odd),.vg4 > :last-child:nth-child(odd){grid-column:1/-1}
+  .tmc,.vc{padding:2.2rem 1.5rem}
+
+  /* Tab servizi: tutte visibili, vanno a capo */
+  .tabn{flex-wrap:wrap!important;overflow:visible;gap:.5rem;margin-left:calc(-1 * var(--gx));margin-right:calc(-1 * var(--gx));padding:1.25rem var(--gx);border-bottom:none;background:transparent}
+  .tabb{border:1px solid var(--brd);margin:0;padding:.7rem .9rem;font-size:.72rem;white-space:normal;text-align:center;background:var(--w);min-height:44px}
+  .tabb[aria-selected="true"]{background:var(--gold);border-color:var(--gold);color:#fff}
+
+  .ctab{padding:3.5rem var(--gx)}
+  footer{padding:3rem var(--gx) calc(1.5rem + env(safe-area-inset-bottom))}
+  .modal-panel{max-height:calc(100vh - 2rem);max-height:calc(100dvh - 2rem)}
+  .modal-overlay{padding:1rem}
+}
+
+@media(max-width:600px){
+  :root{--gx:1.25rem}
+  .hero{padding-top:calc(var(--nav-h) + 2rem);gap:2rem}
+  .hero-sx h1{font-size:clamp(2.3rem,11vw,3.2rem)}
+  .hero-desc{font-size:.98rem;line-height:1.75}
+  .hero-btn{flex-direction:column;align-items:stretch}
+  .hero-btn a{text-align:center}
+  .intestazione h1{font-size:clamp(2rem,9.5vw,2.8rem)}
+  .titolo{font-size:clamp(1.6rem,7.5vw,2.2rem)}
+  .etichetta,.hero-tag{letter-spacing:.2em;font-size:.7rem}
+  .sn,.nn{font-size:2.1rem}
+  .sb,.nb{padding:1.4rem .8rem}
+  .sl,.nl{font-size:.68rem;letter-spacing:.08em}
+
+  .tgg{grid-template-columns:1fr!important}
+  .tabb{flex:1 1 calc(50% - .5rem)}
+  .tabc[aria-hidden="false"]{grid-template-columns:1fr}
+
+  .crow{padding:2rem var(--gx)}
+  .ir{flex-direction:column;gap:.25rem}
+  .il{min-width:0}
+  .iv{word-break:break-word}
+  .tri{padding:.9rem 1rem}
+  .cit{padding:2rem 1.5rem}
+  .tli{gap:1.1rem}
+  .ctab h2{font-size:1.7rem}
+  .ctab .btn-oro{width:100%;text-align:center}
+  .binv{width:100%}
+  .modal-close{width:44px;height:44px;top:.75rem;right:.75rem}
+
+  #cookie-banner{padding-bottom:calc(1.2rem + env(safe-area-inset-bottom))}
+}
+
+/* Telefoni molto stretti (iPhone SE 1ª gen., Galaxy Fold chiuso) */
+@media(max-width:360px){
+  :root{--gx:1rem}
+  .logo{gap:.6rem}
+  .logo-box{width:36px;height:36px}
+  .logo-main{font-size:.74rem;letter-spacing:.04em}
+  .logo-sub{font-size:.55rem;letter-spacing:.14em}
+  .tabb{flex-basis:100%}
+  .sg{grid-template-columns:1fr 1fr}
+}
+
+/* Telefoni in orizzontale: menu scrollabile e hero compatto */
+@media(max-height:500px) and (orientation:landscape){
+  .hero{min-height:0}
+  #cookie-banner{max-height:70vh;overflow-y:auto}
+}
+
+/* Touch: niente hover "appiccicosi" che spostano le card */
+@media(hover:none){
+  .pi:hover,.ac:hover,.tmc:hover,.vc:hover,.svc:hover,.btn-oro:hover,.btn-bordo:hover{transform:none;box-shadow:none}
+  .tmc-bio .bio-hint{opacity:1;transform:none}
+}
+
+/* ══════════════════════════════════════
    PRINT STYLES
    ══════════════════════════════════════ */
 @media print{
@@ -981,6 +1095,7 @@ details[open] summary{color:var(--gold)}
     <li role="none"><a href="#servizi" role="menuitem" data-nav="servizi">Servizi</a></li>
     <li role="none"><a href="#team" role="menuitem" data-nav="team">Team</a></li>
     <li role="none"><a href="#contatti" role="menuitem" data-nav="contatti">Contatti</a></li>
+    <li role="none" class="nav-mobile-only"><a href="tel:+390644241565" role="menuitem">Chiama +39 06 442 415 65</a></li>
   </ul>
   <a class="nav-cta" href="#contatti" data-nav="contatti">Richiedi consulenza</a>
 </nav>
@@ -1511,6 +1626,16 @@ details[open] summary{color:var(--gold)}
     showPage(initHash);
   }
 
+  // ── Altezza reale della navbar (varia se il logo va a capo) ──
+  var navEl=document.querySelector('nav');
+  function syncNavH(){
+    if(navEl) document.documentElement.style.setProperty('--nav-h',navEl.offsetHeight+'px');
+  }
+  syncNavH();
+  window.addEventListener('resize',syncNavH,false);
+  window.addEventListener('orientationchange',syncNavH,false);
+  if(document.fonts && document.fonts.ready) document.fonts.ready.then(syncNavH);
+
   // ── Menu hamburger mobile ──
   var menuBtn=document.getElementById('menuBtn');
   var navLinks=document.getElementById('navLinks');
@@ -1525,6 +1650,21 @@ details[open] summary{color:var(--gold)}
         navLinks.className='nav-links open';
         menuBtn.setAttribute('aria-expanded','true');
         menuBtn.setAttribute('aria-label','Chiudi menu di navigazione');
+      }
+    },false);
+    // Chiudi toccando fuori dal menu o premendo Esc
+    document.addEventListener('click',function(e){
+      if(navLinks.className.indexOf('open')===-1) return;
+      if(navLinks.contains(e.target)||menuBtn.contains(e.target)) return;
+      navLinks.className='nav-links';
+      menuBtn.setAttribute('aria-expanded','false');
+      menuBtn.setAttribute('aria-label','Apri menu di navigazione');
+    },false);
+    document.addEventListener('keydown',function(e){
+      if(e.keyCode===27 && navLinks.className.indexOf('open')!==-1){
+        navLinks.className='nav-links';
+        menuBtn.setAttribute('aria-expanded','false');
+        menuBtn.focus();
       }
     },false);
   }
